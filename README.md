@@ -2,14 +2,14 @@
 
 # Novium Official Releases
 
-[![Latest Release](https://img.shields.io/badge/LATEST%20RELEASE-v0.3.7-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
+[![Latest Release](https://img.shields.io/badge/LATEST%20RELEASE-v0.3.8-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
 [![Platform](https://img.shields.io/badge/PLATFORM-WINDOWS%2010%20%7C%2011-818cf8?style=for-the-badge&labelColor=050608)](#)
 [![Zero Mock Data](https://img.shields.io/badge/TELEMETRY-ZERO%20MOCK%20DATA-10b981?style=for-the-badge&labelColor=050608)](#)
 [![License](https://img.shields.io/badge/LICENSE-MIT-f59e0b?style=for-the-badge&labelColor=050608)](#)
 
 ### The official distribution repository, binary mirror, and differential auto-updater feed for the Novium desktop ecosystem.
 
-[Download Latest (v0.3.7)](#direct-downloads) • [Release Notes](#release-matrix--changelog) • [Featured Products](#featured-products) • [Main Monorepo](https://github.com/novaozone187/Novium)
+[Download Latest (v0.3.8)](#direct-downloads) • [Release Notes](#release-matrix--changelog) • [Featured Products](#featured-products) • [Main Monorepo](https://github.com/novaozone187/Novium)
 
 </div>
 
@@ -22,7 +22,7 @@
 
 | Product | Target Platform | Latest Version | Direct Installer | SHA-512 Blockmap |
 | :--- | :--- | :--- | :--- | :--- |
-| **Novium Horizon** | Windows 10/11 (x64) | `v0.3.7` | [**Novium.Horizon.Setup.0.3.7.exe**](https://github.com/novaozone187/novium-releases/releases/download/v0.3.7/Novium.Horizon.Setup.0.3.7.exe) | [`.blockmap`](https://github.com/novaozone187/novium-releases/releases/download/v0.3.7/Novium.Horizon.Setup.0.3.7.exe.blockmap) |
+| **Novium Horizon** | Windows 10/11 (x64) | `v0.3.8` | [**Novium-Horizon-Setup-0.3.8.exe**](https://github.com/novaozone187/novium-releases/releases/download/v0.3.8/Novium-Horizon-Setup-0.3.8.exe) | [`.blockmap`](https://github.com/novaozone187/novium-releases/releases/download/v0.3.8/Novium-Horizon-Setup-0.3.8.exe.blockmap) |
 
 > [!TIP]
 > **Differential Auto-Updates Active**: Once installed, Novium Horizon automatically checks for new releases on launch. Using Electron's `latest.yml` differential feed and blockmaps, updates download silently in the background and only transfer changed binary chunks.
@@ -34,6 +34,8 @@
 ### Novium Horizon
 Desktop System Intelligence, Dynamic Island Capsule HUD, live hardware telemetry, media bridge, and differential auto-updater.
 
+- **Differential Auto-Update Asset Alignment**: Uploaded both hyphenated (`Novium-Horizon-Setup-X.X.X.exe`) and dot-notated installer names across all releases, eliminating 404 download errors in `electron-updater`.
+- **Accurate Dynamic Island Update Status**: Fixed notification banner condition to eliminate premature "Restart & Apply" display during active downloads. Live progress is displayed during downloads, and "Restart & Apply" only appears once verified.
 - **Persistent GPU Telemetry Display**: Eliminated the artificial `gpu > 15` threshold that caused the GPU usage metric to vanish when system utilization dropped to 15% or below. Real-time GPU load is now consistently displayed alongside CPU and RAM whenever GPU hardware is present.
 - **Resilient Hardware Sensor Pipeline**: Hardened `nvidia-smi` subprocess polling by increasing the query timeout to 2000ms and eliminating premature sensor latch-off on transient power-state latencies.
 - **Continuous Telemetry Caching**: Retains the last valid GPU telemetry sample across momentary sensor latency spikes, ensuring zero telemetry dropouts or flickers to 0%.
@@ -65,6 +67,7 @@ Desktop System Intelligence, Dynamic Island Capsule HUD, live hardware telemetry
 
 | Version | Release Date | Highlights & Changes | Assets |
 | :--- | :--- | :--- | :--- |
+| **v0.3.8** | 2026-11-07 | Multi-name release binary asset mirroring (hyphenated and dot-notated) to resolve 404s in `electron-updater`; accurate Dynamic Island download progress without premature "Restart & Apply" button; synchronized error handling. | [Setup (v0.3.8)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.8) |
 | **v0.3.7** | 2026-11-07 | Persistent GPU telemetry display (removed artificial `gpu > 15` threshold; displays load continuously alongside CPU/RAM); resilient `nvidia-smi` sensor pipeline with 2000ms timeout and transient latency caching; eliminated telemetry dropouts. | [Setup (v0.3.7)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.7) |
 | **v0.3.6** | 2026-11-07 | Content-wrapping Dynamic Island geometry (telemetry drawer height reduced to 228px, eliminating 77px of blank space void; width tightened to 500px); calibrated optical centering for Play icon (centroid at x=12.08); eliminated intrusive browser tooltip popups with aria-label; streamlined header controls without chevrons. | [Setup (v0.3.6)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.6) |
 | **v0.3.5** | 2026-11-07 | Streamlined Dynamic Island control architecture: removed redundant chevron collapse buttons across all expanded headers (media deck, dashboard header, update cards); native outside-click, escape, and dismiss gesture handling. | [Setup (v0.3.5)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.5) |
@@ -73,11 +76,6 @@ Desktop System Intelligence, Dynamic Island Capsule HUD, live hardware telemetry
 | **v0.3.2** | 2026-11-07 | Unified Apple fluid spring physics across all Dynamic Island states; organic secondary bubble emergence and liquid retraction; mathematically centered split placement; dynamic squircle corner radius interpolation; calibrated top-bezel exit. | [Setup (v0.3.2)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.2) |
 | **v0.3.1** | 2026-11-07 | Fixed optical centering of the play triangle icon inside the circular transport controls on both collapsed capsule and player deck. | [Setup (v0.3.1)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.1) |
 | **v0.3.0** | 2026-11-07 | Robust differential auto-updater state machine; true byte transfer progress and download tracking; fixed premature "Restart & Apply" display before complete package download. | [Setup (v0.3.0)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.0) |
-| **v0.2.9** | 2026-11-07 | Comprehensive dynamic onboarding tour; interactive multi-step product walk-through; smooth step transitions and animated spotlights. | [Setup (v0.2.9)](https://github.com/novaozone187/novium-releases/releases/tag/v0.2.9) |
-| **v0.2.8** | 2026-11-07 | Auto-hide and peeking engine for the Dynamic Island; edge-trigger zones on display bezels; refined mouse hover transitions. | [Setup (v0.2.8)](https://github.com/novaozone187/novium-releases/releases/tag/v0.2.8) |
-| **v0.2.7** | 2026-11-07 | Fixed crash on startup related to Win32 loopback socket initialization; enhanced error boundaries across renderer components. | [Setup (v0.2.7)](https://github.com/novaozone187/novium-releases/releases/tag/v0.2.7) |
-| **v0.2.6** | 2026-11-07 | Refined audio visualizer frequency spectrum calculation; improved responsiveness for high-frequency transients. | [Setup (v0.2.6)](https://github.com/novaozone187/novium-releases/releases/tag/v0.2.6) |
-| **v0.2.5** | 2026-11-07 | Real hardware telemetry engine with systeminformation integration; CPU, RAM, GPU, network, and process monitoring with zero simulated data. | [Setup (v0.2.5)](https://github.com/novaozone187/novium-releases/releases/tag/v0.2.5) |
 
 ---
 
