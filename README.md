@@ -2,14 +2,14 @@
 
 # Novium Official Releases
 
-[![Latest Release](https://img.shields.io/badge/LATEST%20RELEASE-v0.3.4-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
+[![Latest Release](https://img.shields.io/badge/LATEST%20RELEASE-v0.3.5-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
 [![Platform](https://img.shields.io/badge/PLATFORM-WINDOWS%2010%20%7C%2011-818cf8?style=for-the-badge&labelColor=050608)](#)
 [![Zero Mock Data](https://img.shields.io/badge/TELEMETRY-ZERO%20MOCK%20DATA-10b981?style=for-the-badge&labelColor=050608)](#)
 [![License](https://img.shields.io/badge/LICENSE-MIT-f59e0b?style=for-the-badge&labelColor=050608)](#)
 
 ### The official distribution repository, binary mirror, and differential auto-updater feed for the Novium desktop ecosystem.
 
-[Download Latest (v0.3.4)](#direct-downloads) • [Release Notes](#release-matrix--changelog) • [Featured Products](#featured-products) • [Main Monorepo](https://github.com/novaozone187/Novium)
+[Download Latest (v0.3.5)](#direct-downloads) • [Release Notes](#release-matrix--changelog) • [Featured Products](#featured-products) • [Main Monorepo](https://github.com/novaozone187/Novium)
 
 </div>
 
@@ -22,7 +22,7 @@
 
 | Product | Target Platform | Latest Version | Direct Installer | SHA-512 Blockmap |
 | :--- | :--- | :--- | :--- | :--- |
-| **Novium Horizon** | Windows 10/11 (x64) | `v0.3.4` | [**Novium.Horizon.Setup.0.3.4.exe**](https://github.com/novaozone187/novium-releases/releases/download/v0.3.4/Novium.Horizon.Setup.0.3.4.exe) | [`.blockmap`](https://github.com/novaozone187/novium-releases/releases/download/v0.3.4/Novium.Horizon.Setup.0.3.4.exe.blockmap) |
+| **Novium Horizon** | Windows 10/11 (x64) | `v0.3.5` | [**Novium.Horizon.Setup.0.3.5.exe**](https://github.com/novaozone187/novium-releases/releases/download/v0.3.5/Novium.Horizon.Setup.0.3.5.exe) | [`.blockmap`](https://github.com/novaozone187/novium-releases/releases/download/v0.3.5/Novium.Horizon.Setup.0.3.5.exe.blockmap) |
 
 > [!TIP]
 > **Differential Auto-Updates Active**: Once installed, Novium Horizon automatically checks for new releases on launch. Using Electron's `latest.yml` differential feed and blockmaps, updates download silently in the background and only transfer changed binary chunks.
@@ -34,6 +34,7 @@
 ### Novium Horizon
 Desktop System Intelligence, Dynamic Island Capsule HUD, live hardware telemetry, media bridge, and differential auto-updater.
 
+- **Streamlined Dynamic Island Control Architecture**: Removed redundant chevron collapse buttons from the expanded media deck, dashboard header, and update cards. The Island collapses natively via outside clicks, top-bar dismissal, close controls, or Escape, aligning with Apple's minimal aesthetic.
 - **Dynamic Island Alert Lifecycle & Retraction Architecture**: All system alerts, hardware threshold breaches (CPU > 85%, RAM > 90%), LAN sentry guard events, and software updates emerge immediately as full descriptive notice banners in the Dynamic Island. When the banner duration concludes, if the alert condition remains unresolved, the island smoothly retracts the banner into a detached minimal secondary bubble that persists alongside the capsule until resolved.
 - **Fluid Re-Merge on Resolution**: Once the underlying alert resolves, the bubble organically animates back into the main capsule and merges away without UI interruption.
 - **Interactive Bubble Inspection**: Clicking the unresolved alert bubble expands directly to the alert or update drawer for diagnostic telemetry and one-click resolution.
@@ -59,6 +60,7 @@ Desktop System Intelligence, Dynamic Island Capsule HUD, live hardware telemetry
 
 | Version | Release Date | Highlights & Changes | Assets |
 | :--- | :--- | :--- | :--- |
+| **v0.3.5** | 2026-11-07 | Streamlined Dynamic Island control architecture: removed redundant chevron collapse buttons across all expanded headers (media deck, dashboard header, update cards); native outside-click, escape, and dismiss gesture handling. | [Setup (v0.3.5)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.5) |
 | **v0.3.4** | 2026-11-07 | Dynamic Island alert lifecycle (full banner notice retracts to detached secondary bubble until condition resolved); guaranteed top-bezel emergence on updates and notifications; interactive bubble inspection; optical play icon centering calibration; fluid sliding cover art. | [Setup (v0.3.4)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.4) |
 | **v0.3.3** | 2026-11-07 | Symmetrical optical play icon centering inside circular button; vertical audio visualizer centerline alignment; uniform 8px control spacing; demand-driven Win32 process polling; adaptive GPU telemetry throttling; direct overlay window mount; off-screen telemetry buffering. | [Setup (v0.3.3)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.3) |
 | **v0.3.2** | 2026-11-07 | Unified Apple fluid spring physics across all Dynamic Island states; organic secondary bubble emergence and liquid retraction; mathematically centered split placement; dynamic squircle corner radius interpolation; calibrated top-bezel exit. | [Setup (v0.3.2)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.2) |
