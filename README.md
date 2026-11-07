@@ -2,14 +2,14 @@
 
 # Novium Official Releases
 
-[![Latest Release](https://img.shields.io/badge/LATEST%20RELEASE-v0.2.8-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
+[![Latest Release](https://img.shields.io/badge/LATEST%20RELEASE-v0.2.9-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
 [![Platform](https://img.shields.io/badge/PLATFORM-WINDOWS%2010%20%7C%2011-818cf8?style=for-the-badge&labelColor=050608)](#)
 [![Zero Mock Data](https://img.shields.io/badge/TELEMETRY-ZERO%20MOCK%20DATA-10b981?style=for-the-badge&labelColor=050608)](#)
 [![License](https://img.shields.io/badge/LICENSE-MIT-f59e0b?style=for-the-badge&labelColor=050608)](#)
 
 ### The official distribution repository, binary mirror, and differential auto-updater feed for the Novium desktop ecosystem.
 
-[Download Latest (v0.2.8)](#direct-downloads) • [Release Notes](#release-matrix--changelog) • [Featured Products](#featured-products) • [Main Monorepo](https://github.com/novaozone187/Novium)
+[Download Latest (v0.2.9)](#direct-downloads) • [Release Notes](#release-matrix--changelog) • [Featured Products](#featured-products) • [Main Monorepo](https://github.com/novaozone187/Novium)
 
 </div>
 
@@ -22,7 +22,7 @@
 
 | Product | Target Platform | Latest Version | Direct Installer | SHA-512 Blockmap |
 | :--- | :--- | :--- | :--- | :--- |
-| **Novium Horizon** | Windows 10/11 (x64) | `v0.2.8` | [**Novium.Horizon.Setup.0.2.8.exe**](https://github.com/novaozone187/novium-releases/releases/download/v0.2.8/Novium.Horizon.Setup.0.2.8.exe) | [`.blockmap`](https://github.com/novaozone187/novium-releases/releases/download/v0.2.8/Novium.Horizon.Setup.0.2.8.exe.blockmap) |
+| **Novium Horizon** | Windows 10/11 (x64) | `v0.2.9` | [**Novium.Horizon.Setup.0.2.9.exe**](https://github.com/novaozone187/novium-releases/releases/download/v0.2.9/Novium.Horizon.Setup.0.2.9.exe) | [`.blockmap`](https://github.com/novaozone187/novium-releases/releases/download/v0.2.9/Novium.Horizon.Setup.0.2.9.exe.blockmap) |
 
 > [!TIP]
 > **Differential Auto-Updates Active**: Once installed, Novium Horizon automatically checks for new releases on launch. Using Electron's `latest.yml` differential feed and blockmaps, updates download silently in the background and only transfer changed binary chunks.
@@ -34,6 +34,7 @@
 ### Novium Horizon
 Desktop System Intelligence, Dynamic Island Capsule HUD, live hardware telemetry, media bridge, and differential auto-updater.
 
+- **Dynamic Island Split Emergence**: Detached secondary bubble physically buds and slides out from inside the main bar when a concurrent background task (high utilization alert, file beam, or software update) begins, and liquidly retracts back inside when dismissed.
 - **Fluid Dynamic Island Exit Animation**: Apple HIG quintic spring deceleration (580ms duration with cubic-bezier(0.22, 1, 0.36, 1)) and synchronized opacity fade so the capsule smoothly glides behind the physical display bezel.
 - **Dynamic Discord-Style Guided Tour**: Interactive ambient dark spotlight cutout with direct arrow notches and pulsating radar beacons anchored to mission elements (sidebar deck, 60fps seismograph, Dynamic Island toggle, invariant alerts, and operator profile).
 - **Dynamic Island HUD (Novium Capsule)**: Smooth hardware-accelerated floating capsule at the top screen edge with interactive spring physics, tactile controls, and contextual expansion.
@@ -53,6 +54,7 @@ Desktop System Intelligence, Dynamic Island Capsule HUD, live hardware telemetry
 
 | Version | Release Date | Highlights & Changes | Assets |
 | :--- | :--- | :--- | :--- |
+| **v0.2.9** | 2026-11-07 | Dynamic Island split emergence dynamics (bubble physically buds and slides out of main bar on secondary task start, liquidly retracts and merges back inside on dismissal), synchronized scale/transform spring ballistics, and multi-layered depth. | [Setup (v0.2.9)](https://github.com/novaozone187/novium-releases/releases/tag/v0.2.9) |
 | **v0.2.8** | 2026-11-07 | Fluid Dynamic Island exit animation (580ms Apple HIG spring curve cubic-bezier(0.22, 1, 0.36, 1)), synchronized opacity fade with 60ms delay, relaxed 480ms retreat buffer, and smooth close dismissal. | [Setup (v0.2.8)](https://github.com/novaozone187/novium-releases/releases/tag/v0.2.8) |
 | **v0.2.7** | 2026-11-07 | Dynamic Discord-style guided onboarding tour with ambient SVG spotlight cutout, directional arrow callout notches, pulsating radar beacons, and in-tour interactive controls. | [Setup (v0.2.7)](https://github.com/novaozone187/novium-releases/releases/tag/v0.2.7) |
 | **v0.2.6** | 2026-11-07 | Live hardware audio visualizer with Adaptive Gain Control and harmonic fallback; restored Dynamic Island deck expansion; single unified pill by default in media mode (secondary bubble only emerges on high utilization / alerts). | [Setup (v0.2.6)](https://github.com/novaozone187/novium-releases/releases/tag/v0.2.6) |
