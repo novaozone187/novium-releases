@@ -2,14 +2,14 @@
 
 # Novium Official Releases
 
-[![Latest Release](https://img.shields.io/badge/LATEST%20RELEASE-v0.2.3-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
+[![Latest Release](https://img.shields.io/badge/LATEST%20RELEASE-v0.2.4-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
 [![Platform](https://img.shields.io/badge/PLATFORM-WINDOWS%2010%20%7C%2011-818cf8?style=for-the-badge&labelColor=050608)](#)
 [![Zero Mock Data](https://img.shields.io/badge/TELEMETRY-ZERO%20MOCK%20DATA-10b981?style=for-the-badge&labelColor=050608)](#)
 [![License](https://img.shields.io/badge/LICENSE-MIT-f59e0b?style=for-the-badge&labelColor=050608)](#)
 
 ### The official distribution repository, binary mirror, and differential auto-updater feed for the Novium desktop ecosystem.
 
-[Download Latest (v0.2.3)](#direct-downloads) • [Release Notes](#release-matrix--changelog) • [Featured Products](#featured-products) • [Main Monorepo](https://github.com/novaozone187/Novium)
+[Download Latest (v0.2.4)](#direct-downloads) • [Release Notes](#release-matrix--changelog) • [Featured Products](#featured-products) • [Main Monorepo](https://github.com/novaozone187/Novium)
 
 </div>
 
@@ -22,7 +22,7 @@
 
 | Product | Target Platform | Latest Version | Direct Installer | SHA-512 Blockmap |
 | :--- | :--- | :--- | :--- | :--- |
-| **Novium Horizon** | Windows 10/11 (x64) | `v0.2.3` | [**Novium.Horizon.Setup.0.2.3.exe**](https://github.com/novaozone187/novium-releases/releases/download/v0.2.3/Novium.Horizon.Setup.0.2.3.exe) | [`.blockmap`](https://github.com/novaozone187/novium-releases/releases/download/v0.2.3/Novium.Horizon.Setup.0.2.3.exe.blockmap) |
+| **Novium Horizon** | Windows 10/11 (x64) | `v0.2.4` | [**Novium.Horizon.Setup.0.2.4.exe**](https://github.com/novaozone187/novium-releases/releases/download/v0.2.4/Novium.Horizon.Setup.0.2.4.exe) | [`.blockmap`](https://github.com/novaozone187/novium-releases/releases/download/v0.2.4/Novium.Horizon.Setup.0.2.4.exe.blockmap) |
 
 > [!TIP]
 > **Differential Auto-Updates Active**: Once installed, Novium Horizon automatically checks for new releases on launch. Using Electron's `latest.yml` differential feed and blockmaps, updates download silently in the background and only transfer changed binary chunks.
@@ -35,6 +35,7 @@
 Desktop System Intelligence, Dynamic Island Capsule HUD, live hardware telemetry, media bridge, and differential auto-updater.
 
 - **Dynamic Island HUD (Novium Capsule)**: Smooth hardware-accelerated floating capsule at the top screen edge with interactive spring physics, tactile controls, and contextual expansion.
+- **Zero Windows Toasts**: All noisy OS Action Center notifications are removed. Alerts and update notices route purely through the Dynamic Island.
 - **Fullscreen Video Lock**: Strict expansion suppression when watching YouTube, Netflix, VLC, or browser video in fullscreen mode.
 - **Media Control Protection**: Expanded media controls are protected from being hijacked or overridden by background notifications.
 - **Zero Mock Data Directive**: Operating system telemetry, process lists, CPU/RAM/GPU loads, network metrics, and media controls query real Windows APIs with genuine data.
@@ -46,6 +47,7 @@ Desktop System Intelligence, Dynamic Island Capsule HUD, live hardware telemetry
 
 | Version | Release Date | Highlights & Changes | Assets |
 | :--- | :--- | :--- | :--- |
+| **v0.2.4** | 2026-11-07 | Native Windows OS notifications removed; all alerts, telemetry warnings, and update notices route exclusively through Horizon's Dynamic Island HUD. | [Setup (v0.2.4)](https://github.com/novaozone187/novium-releases/releases/tag/v0.2.4) |
 | **v0.2.3** | 2026-11-07 | Fullscreen video expansion suppression (YouTube, Netflix, browser videos lock bar from expanding and tuck into bezel), zero-jitter song transition grace manager, and live WASAPI loopback spectrum. | [Setup (v0.2.3)](https://github.com/novaozone187/novium-releases/releases/tag/v0.2.3) |
 | **v0.2.2** | 2026-11-07 | Dynamic Island notification isolation, media control protection, in-drawer alert toasts, and embedded transport controls in banners. | [Setup (v0.2.2)](https://github.com/novaozone187/novium-releases/releases/tag/v0.2.2) |
 | **v0.2.1** | 2026-11-07 | Split-Island presentation for concurrent background activities (Pulsar Beam transfers, hardware alerts), standalone circular bubble. | [Setup (v0.2.1)](https://github.com/novaozone187/novium-releases/releases/tag/v0.2.1) |
@@ -65,7 +67,7 @@ Every build artifact published to this repository is compiled from source and ve
 To verify your downloaded executable:
 
 ```powershell
-Get-FileHash -Path "Novium.Horizon.Setup.0.2.3.exe" -Algorithm SHA512
+Get-FileHash -Path "Novium.Horizon.Setup.0.2.4.exe" -Algorithm SHA512
 ```
 
 Compare the output hash against the hash recorded in `latest.yml` to ensure binary authenticity.
