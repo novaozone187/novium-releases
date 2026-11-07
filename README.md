@@ -2,14 +2,14 @@
 
 # Novium Official Releases
 
-[![Latest Release](https://img.shields.io/badge/LATEST%20RELEASE-v0.3.6-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
+[![Latest Release](https://img.shields.io/badge/LATEST%20RELEASE-v0.3.7-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
 [![Platform](https://img.shields.io/badge/PLATFORM-WINDOWS%2010%20%7C%2011-818cf8?style=for-the-badge&labelColor=050608)](#)
 [![Zero Mock Data](https://img.shields.io/badge/TELEMETRY-ZERO%20MOCK%20DATA-10b981?style=for-the-badge&labelColor=050608)](#)
 [![License](https://img.shields.io/badge/LICENSE-MIT-f59e0b?style=for-the-badge&labelColor=050608)](#)
 
 ### The official distribution repository, binary mirror, and differential auto-updater feed for the Novium desktop ecosystem.
 
-[Download Latest (v0.3.6)](#direct-downloads) • [Release Notes](#release-matrix--changelog) • [Featured Products](#featured-products) • [Main Monorepo](https://github.com/novaozone187/Novium)
+[Download Latest (v0.3.7)](#direct-downloads) • [Release Notes](#release-matrix--changelog) • [Featured Products](#featured-products) • [Main Monorepo](https://github.com/novaozone187/Novium)
 
 </div>
 
@@ -22,7 +22,7 @@
 
 | Product | Target Platform | Latest Version | Direct Installer | SHA-512 Blockmap |
 | :--- | :--- | :--- | :--- | :--- |
-| **Novium Horizon** | Windows 10/11 (x64) | `v0.3.6` | [**Novium.Horizon.Setup.0.3.6.exe**](https://github.com/novaozone187/novium-releases/releases/download/v0.3.6/Novium.Horizon.Setup.0.3.6.exe) | [`.blockmap`](https://github.com/novaozone187/novium-releases/releases/download/v0.3.6/Novium.Horizon.Setup.0.3.6.exe.blockmap) |
+| **Novium Horizon** | Windows 10/11 (x64) | `v0.3.7` | [**Novium.Horizon.Setup.0.3.7.exe**](https://github.com/novaozone187/novium-releases/releases/download/v0.3.7/Novium.Horizon.Setup.0.3.7.exe) | [`.blockmap`](https://github.com/novaozone187/novium-releases/releases/download/v0.3.7/Novium.Horizon.Setup.0.3.7.exe.blockmap) |
 
 > [!TIP]
 > **Differential Auto-Updates Active**: Once installed, Novium Horizon automatically checks for new releases on launch. Using Electron's `latest.yml` differential feed and blockmaps, updates download silently in the background and only transfer changed binary chunks.
@@ -34,8 +34,10 @@
 ### Novium Horizon
 Desktop System Intelligence, Dynamic Island Capsule HUD, live hardware telemetry, media bridge, and differential auto-updater.
 
-- **Content-Wrapping Dynamic Island Geometry**: Eliminated blank space voids across all expanded states. The telemetry matrix now fits snugly within an optimized 228px height (reduced from 305px) and 500px width (reduced from 650px).
-- **Dynamic Capsule Adaptation**: Mesh (202px), Alerts (166px), and Beam (255px) now shape organically to their elements with zero dead black space.
+- **Persistent GPU Telemetry Display**: Eliminated the artificial `gpu > 15` threshold that caused the GPU usage metric to vanish when system utilization dropped to 15% or below. Real-time GPU load is now consistently displayed alongside CPU and RAM whenever GPU hardware is present.
+- **Resilient Hardware Sensor Pipeline**: Hardened `nvidia-smi` subprocess polling by increasing the query timeout to 2000ms and eliminating premature sensor latch-off on transient power-state latencies.
+- **Continuous Telemetry Caching**: Retains the last valid GPU telemetry sample across momentary sensor latency spikes, ensuring zero telemetry dropouts or flickers to 0%.
+- **Content-Wrapping Dynamic Island Geometry**: Eliminated blank space voids across all expanded states. The telemetry matrix fits snugly within an optimized 228px height and 500px width.
 - **Calibrated Optical Centering**: Shifted the right-pointing Play triangle path to optical coordinates (base x=8.75, tip x=18.75), aligning its visual centroid to x=12.08 within the 24x24 viewBox to completely eliminate perceived leftward drift inside circular tactile buttons.
 - **Clean Native Interactions**: Replaced default HTML title attributes on media controls with aria-label, eliminating intrusive browser tooltip popups over transport buttons.
 - **Streamlined Dynamic Island Control Architecture**: Removed redundant chevron collapse buttons from the expanded media deck, dashboard header, and update cards. The Island collapses natively via outside clicks, top-bar dismissal, close controls, or Escape, aligning with Apple's minimal aesthetic.
@@ -63,6 +65,7 @@ Desktop System Intelligence, Dynamic Island Capsule HUD, live hardware telemetry
 
 | Version | Release Date | Highlights & Changes | Assets |
 | :--- | :--- | :--- | :--- |
+| **v0.3.7** | 2026-11-07 | Persistent GPU telemetry display (removed artificial `gpu > 15` threshold; displays load continuously alongside CPU/RAM); resilient `nvidia-smi` sensor pipeline with 2000ms timeout and transient latency caching; eliminated telemetry dropouts. | [Setup (v0.3.7)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.7) |
 | **v0.3.6** | 2026-11-07 | Content-wrapping Dynamic Island geometry (telemetry drawer height reduced to 228px, eliminating 77px of blank space void; width tightened to 500px); calibrated optical centering for Play icon (centroid at x=12.08); eliminated intrusive browser tooltip popups with aria-label; streamlined header controls without chevrons. | [Setup (v0.3.6)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.6) |
 | **v0.3.5** | 2026-11-07 | Streamlined Dynamic Island control architecture: removed redundant chevron collapse buttons across all expanded headers (media deck, dashboard header, update cards); native outside-click, escape, and dismiss gesture handling. | [Setup (v0.3.5)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.5) |
 | **v0.3.4** | 2026-11-07 | Dynamic Island alert lifecycle (full banner notice retracts to detached secondary bubble until condition resolved); guaranteed top-bezel emergence on updates and notifications; interactive bubble inspection; optical play icon centering calibration; fluid sliding cover art. | [Setup (v0.3.4)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.4) |
