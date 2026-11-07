@@ -9,26 +9,29 @@
 
 ### The official distribution repository, binary mirror, and differential auto-updater feed for the Novium desktop ecosystem.
 
-[Download Latest (v0.2.2)](#-direct-downloads) • [Release Notes](#-release-matrix--changelog) • [Featured Products](#-featured-products) • [Main Monorepo](https://github.com/novaozone187/Novium)
-
----
+[Download Latest (v0.2.2)](#direct-downloads) • [Release Notes](#release-matrix--changelog) • [Featured Products](#featured-products) • [Main Monorepo](https://github.com/novaozone187/Novium)
 
 </div>
 
-## 📦 Direct Downloads
+> [!IMPORTANT]
+> **Early Development Notice**: Novium Horizon is currently in active early development and is **not 100% stable**. You may encounter bugs, visual glitches, or unexpected behavior as hardware hooks, system APIs, and desktop overlays are actively developed and refined. Please report any issues on GitHub or in the Discord community.
+
+---
+
+## Direct Downloads
 
 | Product | Target Platform | Latest Version | Direct Installer | SHA-512 Blockmap |
 | :--- | :--- | :--- | :--- | :--- |
-| **Novium Horizon** | Windows 10/11 (x64) | `v0.2.2` | [📥 **Novium.Horizon.Setup.0.2.2.exe**](https://github.com/novaozone187/novium-releases/releases/download/v0.2.2/Novium.Horizon.Setup.0.2.2.exe) | [📄 `.blockmap`](https://github.com/novaozone187/novium-releases/releases/download/v0.2.2/Novium.Horizon.Setup.0.2.2.exe.blockmap) |
+| **Novium Horizon** | Windows 10/11 (x64) | `v0.2.2` | [**Novium.Horizon.Setup.0.2.2.exe**](https://github.com/novaozone187/novium-releases/releases/download/v0.2.2/Novium.Horizon.Setup.0.2.2.exe) | [`.blockmap`](https://github.com/novaozone187/novium-releases/releases/download/v0.2.2/Novium.Horizon.Setup.0.2.2.exe.blockmap) |
 
 > [!TIP]
 > **Existing Users**: If you already have Novium Horizon running, you do not need to manually reinstall. Horizon contains an integrated background differential auto-updater that streams updates automatically and notifies you directly inside the Dynamic Island HUD.
 
 ---
 
-## ⚡ Featured Products
+## Featured Products
 
-### 🏝️ Novium Horizon
+### Novium Horizon
 **Desktop System Intelligence & Dynamic Island Overlay for Windows.**
 
 Novium Horizon is an industrial-grade telemetry monitor, media controller, and floating desktop HUD built with Electron, React 18, and native Win32/WinRT system hooks.
@@ -44,7 +47,7 @@ Novium Horizon is an industrial-grade telemetry monitor, media controller, and f
 
 ---
 
-## 📋 Release Matrix & Changelog
+## Release Matrix & Changelog
 
 | Version | Release Date | Key Highlights & Changelog |
 | :---: | :---: | :--- |
@@ -61,7 +64,7 @@ Novium Horizon is an industrial-grade telemetry monitor, media controller, and f
 
 ---
 
-## 🚀 Installation & First Run
+## Installation & First Run
 
 1. **Download:** Grab the latest `Novium.Horizon.Setup.X.X.X.exe` from the [Releases](https://github.com/novaozone187/novium-releases/releases/latest) page.
 2. **Execute:** Run the installer. It installs Novium Horizon to your local user profile without requiring administrative privileges (`%LOCALAPPDATA%\Programs\Novium Horizon`).
@@ -74,7 +77,7 @@ Novium Horizon is an industrial-grade telemetry monitor, media controller, and f
 
 ---
 
-## ⚖️ License & Open-Source Integrity
+## License & Open-Source Integrity
 
 Novium Horizon is distributed under the [MIT License](LICENSE).  
 Copyright (c) 2026 Luca / Novium Systems. All telemetry engines operate on authentic kernel APIs with strict Zero Mock Data enforcement.
