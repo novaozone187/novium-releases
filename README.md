@@ -2,14 +2,14 @@
 
 # Novium Official Releases
 
-[![Latest Release](https://img.shields.io/badge/LATEST%20RELEASE-v0.3.1-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
+[![Latest Release](https://img.shields.io/badge/LATEST%20RELEASE-v0.3.2-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
 [![Platform](https://img.shields.io/badge/PLATFORM-WINDOWS%2010%20%7C%2011-818cf8?style=for-the-badge&labelColor=050608)](#)
 [![Zero Mock Data](https://img.shields.io/badge/TELEMETRY-ZERO%20MOCK%20DATA-10b981?style=for-the-badge&labelColor=050608)](#)
 [![License](https://img.shields.io/badge/LICENSE-MIT-f59e0b?style=for-the-badge&labelColor=050608)](#)
 
 ### The official distribution repository, binary mirror, and differential auto-updater feed for the Novium desktop ecosystem.
 
-[Download Latest (v0.3.1)](#direct-downloads) • [Release Notes](#release-matrix--changelog) • [Featured Products](#featured-products) • [Main Monorepo](https://github.com/novaozone187/Novium)
+[Download Latest (v0.3.2)](#direct-downloads) • [Release Notes](#release-matrix--changelog) • [Featured Products](#featured-products) • [Main Monorepo](https://github.com/novaozone187/Novium)
 
 </div>
 
@@ -22,7 +22,7 @@
 
 | Product | Target Platform | Latest Version | Direct Installer | SHA-512 Blockmap |
 | :--- | :--- | :--- | :--- | :--- |
-| **Novium Horizon** | Windows 10/11 (x64) | `v0.3.1` | [**Novium.Horizon.Setup.0.3.1.exe**](https://github.com/novaozone187/novium-releases/releases/download/v0.3.1/Novium.Horizon.Setup.0.3.1.exe) | [`.blockmap`](https://github.com/novaozone187/novium-releases/releases/download/v0.3.1/Novium.Horizon.Setup.0.3.1.exe.blockmap) |
+| **Novium Horizon** | Windows 10/11 (x64) | `v0.3.2` | [**Novium.Horizon.Setup.0.3.2.exe**](https://github.com/novaozone187/novium-releases/releases/download/v0.3.2/Novium.Horizon.Setup.0.3.2.exe) | [`.blockmap`](https://github.com/novaozone187/novium-releases/releases/download/v0.3.2/Novium.Horizon.Setup.0.3.2.exe.blockmap) |
 
 > [!TIP]
 > **Differential Auto-Updates Active**: Once installed, Novium Horizon automatically checks for new releases on launch. Using Electron's `latest.yml` differential feed and blockmaps, updates download silently in the background and only transfer changed binary chunks.
@@ -34,19 +34,16 @@
 ### Novium Horizon
 Desktop System Intelligence, Dynamic Island Capsule HUD, live hardware telemetry, media bridge, and differential auto-updater.
 
-- **Optical Centering Polish**: Fixed play triangle icon alignment inside transport control buttons across the capsule HUD and player decks.
-- **Updater Lifecycle & Clean Exit**: Resolved premature "Restart & Apply" display by re-architecting updater states. Resolved overlay close interceptor issue that prevented Horizon from quitting during installation, ensuring clean binary replacement.
-- **Automatic Stale Cache Purge**: Cleans up leftover installer packages in the local pending directory on startup to prevent stale cached versions from falsely indicating ready updates.
-- **Dynamic Island Split Emergence**: Detached secondary bubble physically buds and slides out from inside the main bar when a concurrent background task (high utilization alert, file beam, or software update) begins, and liquidly retracts back inside when dismissed.
-- **Fluid Dynamic Island Exit Animation**: Apple HIG quintic spring deceleration (580ms duration with cubic-bezier(0.22, 1, 0.36, 1)) and synchronized opacity fade so the capsule smoothly glides behind the physical display bezel.
-- **Dynamic Discord-Style Guided Tour**: Interactive ambient dark spotlight cutout with direct arrow notches and pulsating radar beacons anchored to mission elements (sidebar deck, 60fps seismograph, Dynamic Island toggle, invariant alerts, and operator profile).
-- **Dynamic Island HUD (Novium Capsule)**: Smooth hardware-accelerated floating capsule at the top screen edge with interactive spring physics, tactile controls, and contextual expansion.
-- **Live Hardware Audio Visualizer**: Real-time WASAPI loopback FFT analyzer with Adaptive Gain Control and organic acoustic harmonic engine for authentic, continuous equalizer motion.
-- **Reliable Deck Expansion**: Restored full manual expansion on Capsule and chevron clicks, distinguishing between maximized windows and true borderless fullscreen games/videos.
-- **Clean Media Presentation**: Single unified pill in media mode by default; detached secondary bubble is strictly reserved for high utilization alerts, active file beams, and software updates.
+- **Unified Apple Fluid Spring Physics**: Every state transition across the Dynamic Island (idle, media, alerts, beam, and expanded deck) utilizes Apple's signature quintic spring curve cubic-bezier(0.16, 1, 0.3, 1) over a synchronized 420ms duration.
+- **Organic Secondary Bubble Emergence**: Redesigned minimal split presentation coordinates. The secondary bubble physically buds and slides out from inside the right cap of the capsule (+175px to +221px) while smoothly enlarging from scale 0.25 to 1.0, and liquidly retracts upon task completion or deck expansion.
+- **Symmetrical Top-Center Placement**: Split multi-activity presentation is mathematically calibrated so the combined cluster (pill, 12px gap, and bubble) remains centered around the screen midpoint with zero pixel drift.
+- **Dynamic Squircle Interpolation**: Capsule border-radius transitions continuously between a 22px capsule pill in collapsed state and a 36px squircle card in expanded state.
+- **Calibrated Top-Bezel Exit**: Normalized auto-hide exit distance to component height, ensuring smooth, non-accelerated tuck behind the physical bezel.
+- **Optical Transport Centering**: Play and pause transport controls are balanced within circular buttons across all HUD views.
+- **Updater Lifecycle & Clean Exit**: Automatic stale cache cleanup and strict semver validation prevent false "Restart & Apply" indications.
+- **Live Hardware Audio Visualizer**: Real-time WASAPI loopback FFT analyzer with Adaptive Gain Control and organic acoustic harmonic engine.
 - **Zero Windows Toasts**: All noisy OS Action Center notifications are removed. Alerts and update notices route purely through the Dynamic Island.
 - **Fullscreen Video Lock**: Strict auto-expansion suppression when watching YouTube, Netflix, VLC, or browser video in fullscreen mode.
-- **Media Control Protection**: Expanded media controls are protected from being hijacked or overridden by background notifications.
 - **Zero Mock Data Directive**: Operating system telemetry, process lists, CPU/RAM/GPU loads, network metrics, and media controls query real Windows APIs with genuine data.
 - **Decentralized Synapse Bus**: Seamless IPC and UDP loopback message passing between Horizon, Pulsar, BlackEye, and system agents.
 
@@ -56,6 +53,7 @@ Desktop System Intelligence, Dynamic Island Capsule HUD, live hardware telemetry
 
 | Version | Release Date | Highlights & Changes | Assets |
 | :--- | :--- | :--- | :--- |
+| **v0.3.2** | 2026-11-07 | Unified Apple fluid spring physics across all Dynamic Island states; organic secondary bubble emergence and liquid retraction; mathematically centered split placement; dynamic squircle corner radius interpolation; calibrated top-bezel exit. | [Setup (v0.3.2)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.2) |
 | **v0.3.1** | 2026-11-07 | Fixed optical centering of the play triangle icon inside the circular transport controls on both collapsed capsule and player deck. | [Setup (v0.3.1)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.1) |
 | **v0.3.0** | 2026-11-07 | Fixed premature "Restart & Apply" updater state bug; corrected overlay window close interception so autoUpdater.quitAndInstall cleanly quits the process; added startup pending cache purge and strict semver validation. | [Setup (v0.3.0)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.0) |
 | **v0.2.9** | 2026-11-07 | Dynamic Island split emergence dynamics (bubble physically buds and slides out of main bar on secondary task start, liquidly retracts and merges back inside on dismissal), synchronized scale/transform spring ballistics, and multi-layered depth. | [Setup (v0.2.9)](https://github.com/novaozone187/novium-releases/releases/tag/v0.2.9) |
