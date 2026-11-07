@@ -2,14 +2,14 @@
 
 # Novium Official Releases
 
-[![Latest Release](https://img.shields.io/badge/LATEST%20RELEASE-v0.3.2-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
+[![Latest Release](https://img.shields.io/badge/LATEST%20RELEASE-v0.3.3-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
 [![Platform](https://img.shields.io/badge/PLATFORM-WINDOWS%2010%20%7C%2011-818cf8?style=for-the-badge&labelColor=050608)](#)
 [![Zero Mock Data](https://img.shields.io/badge/TELEMETRY-ZERO%20MOCK%20DATA-10b981?style=for-the-badge&labelColor=050608)](#)
 [![License](https://img.shields.io/badge/LICENSE-MIT-f59e0b?style=for-the-badge&labelColor=050608)](#)
 
 ### The official distribution repository, binary mirror, and differential auto-updater feed for the Novium desktop ecosystem.
 
-[Download Latest (v0.3.2)](#direct-downloads) • [Release Notes](#release-matrix--changelog) • [Featured Products](#featured-products) • [Main Monorepo](https://github.com/novaozone187/Novium)
+[Download Latest (v0.3.3)](#direct-downloads) • [Release Notes](#release-matrix--changelog) • [Featured Products](#featured-products) • [Main Monorepo](https://github.com/novaozone187/Novium)
 
 </div>
 
@@ -22,7 +22,7 @@
 
 | Product | Target Platform | Latest Version | Direct Installer | SHA-512 Blockmap |
 | :--- | :--- | :--- | :--- | :--- |
-| **Novium Horizon** | Windows 10/11 (x64) | `v0.3.2` | [**Novium.Horizon.Setup.0.3.2.exe**](https://github.com/novaozone187/novium-releases/releases/download/v0.3.2/Novium.Horizon.Setup.0.3.2.exe) | [`.blockmap`](https://github.com/novaozone187/novium-releases/releases/download/v0.3.2/Novium.Horizon.Setup.0.3.2.exe.blockmap) |
+| **Novium Horizon** | Windows 10/11 (x64) | `v0.3.3` | [**Novium.Horizon.Setup.0.3.3.exe**](https://github.com/novaozone187/novium-releases/releases/download/v0.3.3/Novium.Horizon.Setup.0.3.3.exe) | [`.blockmap`](https://github.com/novaozone187/novium-releases/releases/download/v0.3.3/Novium.Horizon.Setup.0.3.3.exe.blockmap) |
 
 > [!TIP]
 > **Differential Auto-Updates Active**: Once installed, Novium Horizon automatically checks for new releases on launch. Using Electron's `latest.yml` differential feed and blockmaps, updates download silently in the background and only transfer changed binary chunks.
@@ -34,14 +34,15 @@
 ### Novium Horizon
 Desktop System Intelligence, Dynamic Island Capsule HUD, live hardware telemetry, media bridge, and differential auto-updater.
 
-- **Unified Apple Fluid Spring Physics**: Every state transition across the Dynamic Island (idle, media, alerts, beam, and expanded deck) utilizes Apple's signature quintic spring curve cubic-bezier(0.16, 1, 0.3, 1) over a synchronized 420ms duration.
-- **Organic Secondary Bubble Emergence**: Redesigned minimal split presentation coordinates. The secondary bubble physically buds and slides out from inside the right cap of the capsule (+175px to +221px) while smoothly enlarging from scale 0.25 to 1.0, and liquidly retracts upon task completion or deck expansion.
-- **Symmetrical Top-Center Placement**: Split multi-activity presentation is mathematically calibrated so the combined cluster (pill, 12px gap, and bubble) remains centered around the screen midpoint with zero pixel drift.
-- **Dynamic Squircle Interpolation**: Capsule border-radius transitions continuously between a 22px capsule pill in collapsed state and a 36px squircle card in expanded state.
-- **Calibrated Top-Bezel Exit**: Normalized auto-hide exit distance to component height, ensuring smooth, non-accelerated tuck behind the physical bezel.
-- **Optical Transport Centering**: Play and pause transport controls are balanced within circular buttons across all HUD views.
-- **Updater Lifecycle & Clean Exit**: Automatic stale cache cleanup and strict semver validation prevent false "Restart & Apply" indications.
-- **Live Hardware Audio Visualizer**: Real-time WASAPI loopback FFT analyzer with Adaptive Gain Control and organic acoustic harmonic engine.
+- **Optical Transport Centering**: Calibrated play and pause transport controls within circular buttons across all HUD views, eliminating asymmetrical bounding-box offsets with sub-pixel precision.
+- **Centerline Audio Spectrum**: Aligned the live WASAPI loopback FFT analyzer to the vertical centerline of the control group with symmetrical height dilation.
+- **Demand-Driven Process Telemetry**: Win32 process metrics are polled exclusively when overview or process tabs are displayed, eliminating background CPU overhead when hidden or viewing other views.
+- **Adaptive GPU Query Throttling**: Scaled GPU metrics query cache TTL dynamically according to window visibility, completely preventing sub-process storms.
+- **Direct Overlay Mount**: Decoupled overlay rendering from workstation history buffers and state machines, eliminating redundant re-renders.
+- **Off-Screen Telemetry Buffering**: Metrics ticks arriving while tucked into the top bezel are buffered in a ref without triggering DOM re-renders until revealed.
+- **Unified Apple Fluid Spring Physics**: Every state transition across the Dynamic Island utilizes Apple's signature quintic spring curve cubic-bezier(0.16, 1, 0.3, 1) over a synchronized 420ms duration.
+- **Organic Secondary Bubble Emergence**: Secondary bubble physically buds and slides out from inside the right cap of the capsule (+175px to +221px) while smoothly enlarging from scale 0.25 to 1.0.
+- **Symmetrical Top-Center Placement**: Split multi-activity presentation is mathematically calibrated so the combined cluster remains centered around the screen midpoint with zero pixel drift.
 - **Zero Windows Toasts**: All noisy OS Action Center notifications are removed. Alerts and update notices route purely through the Dynamic Island.
 - **Fullscreen Video Lock**: Strict auto-expansion suppression when watching YouTube, Netflix, VLC, or browser video in fullscreen mode.
 - **Zero Mock Data Directive**: Operating system telemetry, process lists, CPU/RAM/GPU loads, network metrics, and media controls query real Windows APIs with genuine data.
@@ -53,6 +54,7 @@ Desktop System Intelligence, Dynamic Island Capsule HUD, live hardware telemetry
 
 | Version | Release Date | Highlights & Changes | Assets |
 | :--- | :--- | :--- | :--- |
+| **v0.3.3** | 2026-11-07 | Symmetrical optical play icon centering inside circular button; vertical audio visualizer centerline alignment; uniform 8px control spacing; demand-driven Win32 process polling; adaptive GPU telemetry throttling; direct overlay window mount; off-screen telemetry buffering. | [Setup (v0.3.3)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.3) |
 | **v0.3.2** | 2026-11-07 | Unified Apple fluid spring physics across all Dynamic Island states; organic secondary bubble emergence and liquid retraction; mathematically centered split placement; dynamic squircle corner radius interpolation; calibrated top-bezel exit. | [Setup (v0.3.2)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.2) |
 | **v0.3.1** | 2026-11-07 | Fixed optical centering of the play triangle icon inside the circular transport controls on both collapsed capsule and player deck. | [Setup (v0.3.1)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.1) |
 | **v0.3.0** | 2026-11-07 | Fixed premature "Restart & Apply" updater state bug; corrected overlay window close interception so autoUpdater.quitAndInstall cleanly quits the process; added startup pending cache purge and strict semver validation. | [Setup (v0.3.0)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.0) |
