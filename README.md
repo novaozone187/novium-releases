@@ -24,6 +24,16 @@
 | :--- | :--- | :--- | :--- | :--- |
 | **Novium Horizon** | Windows 10/11 (x64) | `v0.3.8` | [**Novium-Horizon-Setup-0.3.8.exe**](https://github.com/novaozone187/novium-releases/releases/download/v0.3.8/Novium-Horizon-Setup-0.3.8.exe) | [`.blockmap`](https://github.com/novaozone187/novium-releases/releases/download/v0.3.8/Novium-Horizon-Setup-0.3.8.exe.blockmap) |
 
+> [!NOTE]
+> **Windows SmartScreen & Antivirus Prompt**:
+> When downloading or running the installer (`.exe`), Windows Defender SmartScreen or your browser may show a prompt stating that the file is "unrecognized" or "might be harmful".
+>
+> This occurs purely because Novium is a free, open-source project and does not have an expensive commercial EV code-signing certificate. All binaries are built directly and transparently from the open-source repository with zero spyware, analytics, or background telemetry snooping.
+>
+> **This warning is expected and should be disregarded:**
+> 1. In Windows SmartScreen: Click **"More info"** and then select **"Run anyway"**.
+> 2. In Microsoft Edge / Google Chrome: If prompted, click the `...` menu on the download, choose **"Keep"**, and click **"Keep anyway"**.
+
 > [!TIP]
 > **Differential Auto-Updates Active**: Once installed, Novium Horizon automatically checks for new releases on launch. Using Electron's `latest.yml` differential feed and blockmaps, updates download silently in the background and only transfer changed binary chunks.
 
