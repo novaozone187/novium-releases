@@ -2,102 +2,63 @@
 
 # Novium Official Releases
 
-[![Latest Release](https://img.shields.io/badge/LATEST%20RELEASE-v0.3.10-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
+[![Latest Release](https://img.shields.io/badge/LATEST%20RELEASE-v0.3.11-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
 [![Platform](https://img.shields.io/badge/PLATFORM-WINDOWS%2010%20%7C%2011-818cf8?style=for-the-badge&labelColor=050608)](#)
 [![Zero Mock Data](https://img.shields.io/badge/TELEMETRY-ZERO%20MOCK%20DATA-10b981?style=for-the-badge&labelColor=050608)](#)
 [![License](https://img.shields.io/badge/LICENSE-MIT-f59e0b?style=for-the-badge&labelColor=050608)](#)
 
 ### The official distribution repository, binary mirror, and differential auto-updater feed for the Novium desktop ecosystem.
 
-[Download Latest (v0.3.10)](#direct-downloads) • [Release Notes](#release-matrix--changelog) • [Featured Products](#featured-products) • [Main Monorepo](https://github.com/novaozone187/Novium)
+[Download Latest (v0.3.11)](#direct-downloads) • [Release Notes](#release-matrix--changelog) • [Featured Products](#featured-products) • [Main Monorepo](https://github.com/novaozone187/Novium)
 
 </div>
 
 > [!IMPORTANT]
 > **Early Development Notice**: Novium Horizon is currently in active early development and is **not 100% stable**. You may encounter bugs, visual glitches, or unexpected behavior as hardware hooks, system APIs, and desktop overlays are actively developed and refined. Please report any issues on GitHub or in the Discord community.
 
+> [!NOTE]
+> **Windows SmartScreen / Browser Notice**: Because Novium is a non-commercial open-source project created by an independent minor developer under German law (§§ 106–112 BGB), the releases are not signed with a paid corporate Extended Validation (EV) certificate. Windows SmartScreen or web browsers may show an unrecognized application prompt (e.g., *"Windows protected your PC"* or *"This file might be harmful"*). This is completely normal and expected for unsigned open-source binaries. Simply click **"More info"** and then **"Run anyway"** (or **"Keep anyway"**) to continue.
+
 ---
 
 ## Direct Downloads
 
-| Product | Target Platform | Latest Version | Direct Installer | SHA-512 Blockmap |
-| :--- | :--- | :--- | :--- | :--- |
-| **Novium Horizon** | Windows 10/11 (x64) | `v0.3.10` | [**Novium-Horizon-Setup-0.3.10.exe**](https://github.com/novaozone187/novium-releases/releases/download/v0.3.10/Novium-Horizon-Setup-0.3.10.exe) | [`.blockmap`](https://github.com/novaozone187/novium-releases/releases/download/v0.3.10/Novium-Horizon-Setup-0.3.10.exe.blockmap) |
+### Novium Horizon (v0.3.11)
+Central hardware hub, tactile Dynamic Island desktop capsule, live audio visualizer, real-time system telemetry, and companion mesh director.
 
-> [!NOTE]
-> **Windows SmartScreen & Antivirus Prompt**:
-> When downloading or running the installer (`.exe`), Windows Defender SmartScreen or your browser may show a prompt stating that the file is "unrecognized" or "might be harmful".
->
-> This occurs purely because Novium is a free, open-source project and does not have an expensive commercial EV code-signing certificate. All binaries are built directly and transparently from the open-source repository with zero spyware, analytics, or background telemetry snooping.
->
-> **This warning is expected and should be disregarded:**
-> 1. In Windows SmartScreen: Click **"More info"** and then select **"Run anyway"**.
-> 2. In Microsoft Edge / Google Chrome: If prompted, click the `...` menu on the download, choose **"Keep"**, and click **"Keep anyway"**.
-
-> [!TIP]
-> **Differential Auto-Updates Active**: Once installed, Novium Horizon automatically checks for new releases on launch. Using Electron's `latest.yml` differential feed and blockmaps, updates download silently in the background and only transfer changed binary chunks.
-
----
-
-## Featured Products
-
-### Novium Horizon
-Desktop System Intelligence, Dynamic Island Capsule HUD, live hardware telemetry, media bridge, and differential auto-updater.
-
-- **Dynamic Island Squircle Geometry & Corner Spacing**: Calibrated outer capsule corner radius from 36px to 28px continuous squircle, eliminating overly aggressive corner curves.
-- **Concentric Corner Spacing**: Upgraded horizontal header and drawer paddings to 20px (`px-5`), providing generous optical breathing room for status icons, badges, close buttons, and progress gauges away from corner curves.
-- **Unstacked Alert Architecture**: Eliminated nested in-drawer alert toasts. Active expanded tasks (Software Update, Music Player, Telemetry) maintain single-purpose focus without intrusive alert cards stacking inside the drawer and pushing controls off-screen.
-- **Fully Snug Software Update Card**: Calibrated expanded update deck to 186px with proportional 56px progress gauge and 10px padded action button, ensuring the Restart Horizon & Apply Update button is fully visible with clean clearance.
-- **Dynamic Island Media Deck Height Calibration**: Calibrated expanded capsule height to 254px, resolving bottom clipping of transport controls.
-- **Differential Auto-Update Asset Alignment**: Uploaded both hyphenated (`Novium-Horizon-Setup-X.X.X.exe`) and dot-notated installer names across all releases, eliminating 404 download errors in `electron-updater`.
-- **Accurate Dynamic Island Update Status**: Fixed notification banner condition to eliminate premature "Restart & Apply" display during active downloads. Live progress is displayed during downloads, and "Restart & Apply" only appears once verified.
-- **Persistent GPU Telemetry Display**: Eliminated the artificial `gpu > 15` threshold that caused the GPU usage metric to vanish when system utilization dropped to 15% or below. Real-time GPU load is now consistently displayed alongside CPU and RAM whenever GPU hardware is present.
-- **Resilient Hardware Sensor Pipeline**: Hardened `nvidia-smi` subprocess polling by increasing the query timeout to 2000ms and eliminating premature sensor latch-off on transient power-state latencies.
-- **Continuous Telemetry Caching**: Retains the last valid GPU telemetry sample across momentary sensor latency spikes, ensuring zero telemetry dropouts or flickers to 0%.
-- **Content-Wrapping Dynamic Island Geometry**: Eliminated blank space voids across all expanded states. The telemetry matrix fits snugly within an optimized 228px height and 500px width.
-- **Calibrated Optical Centering**: Shifted the right-pointing Play triangle path to optical coordinates (base x=8.75, tip x=18.75), aligning its visual centroid to x=12.08 within the 24x24 viewBox to completely eliminate perceived leftward drift inside circular tactile buttons.
-- **Clean Native Interactions**: Replaced default HTML title attributes on media controls with aria-label, eliminating intrusive browser tooltip popups over transport buttons.
-- **Streamlined Dynamic Island Control Architecture**: Removed redundant chevron collapse buttons from the expanded media deck, dashboard header, and update cards. The Island collapses natively via outside clicks, top-bar dismissal, close controls, or Escape, aligning with Apple's minimal aesthetic.
-- **Dynamic Island Alert Lifecycle & Retraction Architecture**: All system alerts, hardware threshold breaches (CPU > 85%, RAM > 90%), LAN sentry guard events, and software updates emerge immediately as full descriptive notice banners in the Dynamic Island. When the banner duration concludes, if the alert condition remains unresolved, the island smoothly retracts the banner into a detached minimal secondary bubble that persists alongside the capsule until resolved.
-- **Fluid Re-Merge on Resolution**: Once the underlying alert resolves, the bubble organically animates back into the main capsule and merges away without UI interruption.
-- **Interactive Bubble Inspection**: Clicking the unresolved alert bubble expands directly to the alert or update drawer for diagnostic telemetry and one-click resolution.
-- **Auto-Emergence for Updates and Alerts**: Software updates (downloading/downloaded) and critical alerts now unconditionally reveal the capsule from the top bezel, regardless of auto-hide or prior peeking state.
-- **Unsuppressed Critical Peeking**: High-priority alerts and update notifications bypass fullscreen video suppression so critical system events are never dropped silently.
-- **Centerline Audio Spectrum**: Aligned the live WASAPI loopback FFT analyzer to the vertical centerline of the control group with symmetrical height dilation.
-- **Fluid Sliding Cover Art**: Media cover art smoothly expands and collapses without layout jitter or empty placeholder boxes when artwork cannot be grabbed.
-- **Demand-Driven Process Telemetry**: Win32 process metrics are polled exclusively when overview or process tabs are displayed, eliminating background CPU overhead when hidden or viewing other views.
-- **Adaptive GPU Query Throttling**: Scaled GPU metrics query cache TTL dynamically according to window visibility, completely preventing sub-process storms.
-- **Direct Overlay Mount**: Decoupled overlay rendering from workstation history buffers and state machines, eliminating redundant re-renders.
-- **Off-Screen Telemetry Buffering**: Metrics ticks arriving while tucked into the top bezel are buffered in a ref without triggering DOM re-renders until revealed.
-- **Unified Apple Fluid Spring Physics**: Every state transition across the Dynamic Island utilizes Apple's signature quintic spring curve cubic-bezier(0.16, 1, 0.3, 1) over a synchronized 420ms duration.
-- **Organic Secondary Bubble Emergence**: Secondary bubble physically buds and slides out from inside the right cap of the capsule while smoothly enlarging from scale 0.25 to 1.0.
-- **Symmetrical Top-Center Placement**: Split multi-activity presentation is mathematically calibrated so the combined cluster remains centered around the screen midpoint with zero pixel drift.
-- **Zero Windows Toasts**: All noisy OS Action Center notifications are removed. Alerts and update notices route purely through the Dynamic Island.
-- **Zero Mock Data Directive**: Operating system telemetry, process lists, CPU/RAM/GPU loads, network metrics, and media controls query real Windows APIs with genuine data.
-- **Decentralized Synapse Bus**: Seamless IPC and UDP loopback message passing between Horizon, Pulsar, BlackEye, and system agents.
+| Architecture | Package | Download Link | Checksum (SHA-512) |
+|---|---|---|---|
+| **Windows x64** | One-Click Installer (.exe) | [Novium-Horizon-Setup-0.3.11.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.11/Novium-Horizon-Setup-0.3.11.exe) | `9/3AUk2NSx6uPCDfc3mrr2lbvtS/YsJvejrriCq4bT30zHPPbNBTKdPrVwCI6Lr/pvuD890RjOjqHE0ea4Z60g==` |
+| **Windows x64** | Standard Installer (.exe) | [Novium.Horizon.Setup.0.3.11.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.11/Novium%20Horizon%20Setup%200.3.11.exe) | `9/3AUk2NSx6uPCDfc3mrr2lbvtS/YsJvejrriCq4bT30zHPPbNBTKdPrVwCI6Lr/pvuD890RjOjqHE0ea4Z60g==` |
 
 ---
 
 ## Release Matrix & Changelog
 
-| Version | Release Date | Highlights & Changes | Assets |
-| :--- | :--- | :--- | :--- |
-| **v0.3.10** | 2026-11-08 | Dynamic Island 28px squircle geometry; eliminated stacked alert toasts inside active activity decks; 20px concentric corner spacing; fully snug Software Update deck with 186px height and unclipped action button. | [Setup (v0.3.10)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.10) |
-| **v0.3.9** | 2026-11-07 | Dynamic Island expanded music deck height calibrated to 254px, eliminating clipping of transport controls (Previous, Play/Pause, Next); generous 24px bottom clearance; aria-labels on buttons. | [Setup (v0.3.9)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.9) |
-| **v0.3.8** | 2026-11-07 | Multi-name release binary asset mirroring (hyphenated and dot-notated) to resolve 404s in `electron-updater`; accurate Dynamic Island download progress without premature "Restart & Apply" button; synchronized error handling. | [Setup (v0.3.8)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.8) |
-| **v0.3.7** | 2026-11-07 | Persistent GPU telemetry display (removed artificial `gpu > 15` threshold; displays load continuously alongside CPU/RAM); resilient `nvidia-smi` sensor pipeline with 2000ms timeout and transient latency caching; eliminated telemetry dropouts. | [Setup (v0.3.7)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.7) |
-| **v0.3.6** | 2026-11-07 | Content-wrapping Dynamic Island geometry (telemetry drawer height reduced to 228px, eliminating 77px of blank space void; width tightened to 500px); calibrated optical centering for Play icon (centroid at x=12.08); eliminated intrusive browser tooltip popups with aria-label; streamlined header controls without chevrons. | [Setup (v0.3.6)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.6) |
-| **v0.3.5** | 2026-11-07 | Streamlined Dynamic Island control architecture: removed redundant chevron collapse buttons across all expanded headers (media deck, dashboard header, update cards); native outside-click, escape, and dismiss gesture handling. | [Setup (v0.3.5)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.5) |
-| **v0.3.4** | 2026-11-07 | Dynamic Island alert lifecycle (full banner notice retracts to detached secondary bubble until condition resolved); guaranteed top-bezel emergence on updates and notifications; interactive bubble inspection; optical play icon centering calibration; fluid sliding cover art. | [Setup (v0.3.4)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.4) |
-| **v0.3.3** | 2026-11-07 | Symmetrical optical play icon centering inside circular button; vertical audio visualizer centerline alignment; uniform 8px control spacing; demand-driven Win32 process polling; adaptive GPU telemetry throttling; direct overlay window mount; off-screen telemetry buffering. | [Setup (v0.3.3)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.3) |
-| **v0.3.2** | 2026-11-07 | Unified Apple fluid spring physics across all Dynamic Island states; organic secondary bubble emergence and liquid retraction; mathematically centered split placement; dynamic squircle corner radius interpolation; calibrated top-bezel exit. | [Setup (v0.3.2)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.2) |
-| **v0.3.1** | 2026-11-07 | Fixed optical centering of the play triangle icon inside the circular transport controls on both collapsed capsule and player deck. | [Setup (v0.3.1)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.1) |
-| **v0.3.0** | 2026-11-07 | Robust differential auto-updater state machine; true byte transfer progress and download tracking; fixed premature "Restart & Apply" display before complete package download. | [Setup (v0.3.0)](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.0) |
+### v0.3.11 (Latest)
+- **Sanitized Error Reporting**: Updater error handler cleanly catches network timeouts (504 Gateway Timeout), mirror synchronization states (404), and offline states, translating them into human-readable messages instead of raw HTTP headers and HTML dumps.
+- **Protected UI Clamping**: Settings telemetry card wraps and defensively clamps update errors to prevent interface disruption.
+- **Synchronized Resting Widths**: Segmented width controls in Settings now accurately match pixel dimensions of the resting Dynamic Island capsule (Compact: 360px, Standard: 420px, Wide: 520px).
+- **Full-Display Canvas Geometry**: Overlay window bounds span the full primary display width without OS-level window moves or flicker when switching between Top Center, Top Right, and Top Left positions.
+
+### v0.3.10
+- **Unstacked Alert Pipeline**: Eliminated nested in-drawer alert toasts.
+- **Apple 28px Squircle Radius**: Calibrated outer capsule corner radius from 36px to 28px squircle.
+- **Concentric Corner Spacing**: Upgraded horizontal header and drawer paddings to 20px (px-5).
+
+---
+
+## Verification & Integrity
+
+All release assets are accompanied by cryptographic SHA-512 blockmaps and hashes to verify binary integrity.
+
+To manually verify the download on Windows PowerShell:
+```powershell
+Get-FileHash -Path "Novium-Horizon-Setup-0.3.11.exe" -Algorithm SHA512
+```
 
 ---
 
 <div align="center">
-
-Novium • Decentralized Autonomous Infrastructure & Tactical System Intelligence
-
+Novium Ecosystem • Zero Mock Data Standard
 </div>
