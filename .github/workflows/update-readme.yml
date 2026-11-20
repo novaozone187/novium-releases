@@ -1,0 +1,51 @@
+name: Update Release README
+
+on:
+  release:
+    types:
+      - published
+      - edited
+      - released
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-readme
+  cancel-in-progress: true
+
+jobs:
+  update-readme:
+    name: Sync README to Latest Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout novium-releases
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Regenerate README.md from GitHub Releases
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WAIT_FOR_ASSETS: '1'
+        run: node scripts/update-readme.mjs
+
+      - name: Commit and Push Updated README.md
+        run: |
+          if git diff --quiet README.md; then
+            echo "README.md is already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          LATEST_TAG=$(node -e "const fs=require('fs');const m=fs.readFileSync('README.md','utf8').match(/Novium Horizon (v[0-9.]+)/);console.log(m?m[1]:'latest')")
+          git add README.md
+          git commit -m "docs: update README for ${LATEST_TAG}"
+          git push origin main

@@ -1,64 +1,78 @@
 <div align="center">
 
-# Novium Official Releases
+# Novium Releases
 
-[![Latest Release](https://img.shields.io/badge/LATEST%20RELEASE-v0.3.11-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
-[![Platform](https://img.shields.io/badge/PLATFORM-WINDOWS%2010%20%7C%2011-818cf8?style=for-the-badge&labelColor=050608)](#)
-[![Zero Mock Data](https://img.shields.io/badge/TELEMETRY-ZERO%20MOCK%20DATA-10b981?style=for-the-badge&labelColor=050608)](#)
-[![License](https://img.shields.io/badge/LICENSE-MIT-f59e0b?style=for-the-badge&labelColor=050608)](#)
+[![Latest Release](https://img.shields.io/badge/LATEST%20RELEASE-v0.3.56-10b981?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
+[![Platform](https://img.shields.io/badge/PLATFORM-WINDOWS%2010%20%7C%2011%20x64-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
+[![Downloads Page](https://img.shields.io/badge/WEBSITE-DOWNLOADS-f4f4f5?style=for-the-badge&labelColor=050608)](https://noviumecosystem.vercel.app/download)
 
-### The official distribution repository, binary mirror, and differential auto-updater feed for the Novium desktop ecosystem.
+Public Windows binary distribution and differential auto-updater feed for **Novium Horizon**.
 
-[Download Latest (v0.3.11)](#direct-downloads) • [Release Notes](#release-matrix--changelog) • [Featured Products](#featured-products) • [Main Monorepo](https://github.com/novaozone187/Novium)
+[**Go to Latest Release (v0.3.56)**](https://github.com/novaozone187/novium-releases/releases/latest) • [**Browse All Releases**](https://github.com/novaozone187/novium-releases/releases) • [**Website Downloads**](https://noviumecosystem.vercel.app/download) • [**Main Source Repository**](https://github.com/novaozone187/Novium)
 
 </div>
+
+---
+
+## How to Get to the Releases Page & Download
+
+If you are looking at the repository file list above, the Windows installer binaries live under **GitHub Releases** — not in the Git source tree:
+
+1. **Direct shortcut:** Open [**Latest Release (v0.3.56)**](https://github.com/novaozone187/novium-releases/releases/latest) or [**All Releases**](https://github.com/novaozone187/novium-releases/releases).
+2. **From the GitHub repository page:** Look at the **Releases** section in the right-hand sidebar of [`novaozone187/novium-releases`](https://github.com/novaozone187/novium-releases) and click the release marked **Latest**.
+3. **Download the installer:** Scroll to the **Assets** section at the bottom of the release notes and download `Novium-Horizon-Setup-0.3.56.exe`.
+4. **Automatic updates:** Once installed, Horizon checks this repository automatically via `electron-updater` (`latest.yml` + `.blockmap`).
+
+> **Availability:** Only **Novium Horizon for Windows (x64)** is currently published. macOS, Linux, Novium Pulsar, and Novium BlackEye are currently unavailable.
 
 > [!IMPORTANT]
-> **Early Development Notice**: Novium Horizon is currently in active early development and is **not 100% stable**. You may encounter bugs, visual glitches, or unexpected behavior as hardware hooks, system APIs, and desktop overlays are actively developed and refined. Please report any issues on GitHub or in the Discord community.
+> **Early Development Status:** Novium Horizon is in active early development and is not 100% stable. Hardware hooks, system APIs, and desktop overlays are subject to rapid iteration.
 
 > [!NOTE]
-> **Windows SmartScreen / Browser Notice**: Because Novium is a non-commercial open-source project created by an independent minor developer under German law (§§ 106–112 BGB), the releases are not signed with a paid corporate Extended Validation (EV) certificate. Windows SmartScreen or web browsers may show an unrecognized application prompt (e.g., *"Windows protected your PC"* or *"This file might be harmful"*). This is completely normal and expected for unsigned open-source binaries. Simply click **"More info"** and then **"Run anyway"** (or **"Keep anyway"**) to continue.
+> **Windows SmartScreen Notice:** Because Novium is a free, non-commercial open-source project without a commercial EV code-signing certificate (§§ 106–112 BGB), Windows SmartScreen or your browser may prompt on unsigned `.exe` files. Click **"More info"** → **"Run anyway"** (or **"Keep anyway"** in your browser) to proceed.
 
 ---
 
-## Direct Downloads
+## Latest Release: Novium Horizon v0.3.56
 
-### Novium Horizon (v0.3.11)
-Central hardware hub, tactile Dynamic Island desktop capsule, live audio visualizer, real-time system telemetry, and companion mesh director.
+- **Release Page:** [Novium Horizon v0.3.56](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.56)
+- **Published:** `2026-11-19`
+- **Target:** Windows 10 / 11 (x64)
+- **Installer SHA-512 (`latest.yml`):** `gLUNW0iqI7shuxiB0Ar069ga6ZrZATFGIcbmdwQb+PG3DQRHXFfC8ImtAyHaerzwdsifuGEewmx3hf8QhDah/w==`
 
-| Architecture | Package | Download Link | Checksum (SHA-512) |
-|---|---|---|---|
-| **Windows x64** | One-Click Installer (.exe) | [Novium-Horizon-Setup-0.3.11.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.11/Novium-Horizon-Setup-0.3.11.exe) | `9/3AUk2NSx6uPCDfc3mrr2lbvtS/YsJvejrriCq4bT30zHPPbNBTKdPrVwCI6Lr/pvuD890RjOjqHE0ea4Z60g==` |
-| **Windows x64** | Standard Installer (.exe) | [Novium.Horizon.Setup.0.3.11.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.11/Novium%20Horizon%20Setup%200.3.11.exe) | `9/3AUk2NSx6uPCDfc3mrr2lbvtS/YsJvejrriCq4bT30zHPPbNBTKdPrVwCI6Lr/pvuD890RjOjqHE0ea4Z60g==` |
+| Target | Package | File | Size | SHA-256 |
+|---|---|---|---|---|
+| Windows 10/11 x64 | One-Click NSIS Installer (.exe) | [Novium-Horizon-Setup-0.3.56.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.56/Novium-Horizon-Setup-0.3.56.exe) | 81.0 MB | `2a3f5edc43cc55021f48f70e7a67148db9c1aeebb8eda4516e367a5dd208074b` |
+| Windows 10/11 x64 | Compatibility Alias (.exe) | [Novium.Horizon.Setup.0.3.56.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.56/Novium.Horizon.Setup.0.3.56.exe) | 81.0 MB | `2a3f5edc43cc55021f48f70e7a67148db9c1aeebb8eda4516e367a5dd208074b` |
+| Windows 10/11 x64 | Differential Blockmap | [Novium-Horizon-Setup-0.3.56.exe.blockmap](https://github.com/novaozone187/novium-releases/releases/download/v0.3.56/Novium-Horizon-Setup-0.3.56.exe.blockmap) | 86.6 KB | `3cea71182bff55619c5af7ad0ed1114a9c1cd71331fc69863b43e0f2e9f24399` |
+| Auto-Updater | Electron Updater Feed | [latest.yml](https://github.com/novaozone187/novium-releases/releases/download/v0.3.56/latest.yml) | 359 B | `050cca2d383b3af5886a308a0ddd5c194b17b2d2fd61112d9e8f1dda3def150f` |
 
----
+### Release Notes (v0.3.56)
 
-## Release Matrix & Changelog
-
-### v0.3.11 (Latest)
-- **Sanitized Error Reporting**: Updater error handler cleanly catches network timeouts (504 Gateway Timeout), mirror synchronization states (404), and offline states, translating them into human-readable messages instead of raw HTTP headers and HTML dumps.
-- **Protected UI Clamping**: Settings telemetry card wraps and defensively clamps update errors to prevent interface disruption.
-- **Synchronized Resting Widths**: Segmented width controls in Settings now accurately match pixel dimensions of the resting Dynamic Island capsule (Compact: 360px, Standard: 420px, Wide: 520px).
-- **Full-Display Canvas Geometry**: Overlay window bounds span the full primary display width without OS-level window moves or flicker when switching between Top Center, Top Right, and Top Left positions.
-
-### v0.3.10
-- **Unstacked Alert Pipeline**: Eliminated nested in-drawer alert toasts.
-- **Apple 28px Squircle Radius**: Calibrated outer capsule corner radius from 36px to 28px squircle.
-- **Concentric Corner Spacing**: Upgraded horizontal header and drawer paddings to 20px (px-5).
+### Minimal AirPlay Tab & Dynamic Island Pairing Code
+- **Minimal Centered AirPlay Tab:** Streamlined `AirPlayView` to a clean centered stage with **Start/Stop Receiver** and a **Settings** modal for broadcast name, stream resolution/FPS, always on top, fullscreen, pairing PIN, and engine logs.
+- **On-Demand Island PIN & Auto-Minimize:** No code is shown on Start; when an Apple device connects and requests pairing, Horizon automatically minimizes and the Dynamic Island displays the 4-digit pairing code in big, bold, plain white numbers, then clears once mirroring starts.
 
 ---
 
-## Verification & Integrity
+## Recent Releases
 
-All release assets are accompanied by cryptographic SHA-512 blockmaps and hashes to verify binary integrity.
+| Tag | Published | Installer (.exe) |
+|---|---|---|
+| [v0.3.56](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.56) | 2026-11-19 | [Novium-Horizon-Setup-0.3.56.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.56/Novium-Horizon-Setup-0.3.56.exe) (81.0 MB) |
+| [v0.3.55](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.55) | 2026-11-19 | [Novium-Horizon-Setup-0.3.55.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.55/Novium-Horizon-Setup-0.3.55.exe) (81.0 MB) |
+| [v0.3.54](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.54) | 2026-11-19 | [Novium-Horizon-Setup-0.3.54.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.54/Novium-Horizon-Setup-0.3.54.exe) (80.9 MB) |
+| [v0.3.53](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.53) | 2026-11-19 | [Novium-Horizon-Setup-0.3.53.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.53/Novium-Horizon-Setup-0.3.53.exe) (80.9 MB) |
+| [v0.3.52](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.52) | 2026-11-19 | [Novium-Horizon-Setup-0.3.52.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.52/Novium-Horizon-Setup-0.3.52.exe) (80.9 MB) |
 
-To manually verify the download on Windows PowerShell:
+Full archive: [`novaozone187/novium-releases/releases`](https://github.com/novaozone187/novium-releases/releases)
+
+---
+
+## Verify Integrity (PowerShell)
+
 ```powershell
-Get-FileHash -Path "Novium-Horizon-Setup-0.3.11.exe" -Algorithm SHA512
+Get-FileHash -Path "Novium-Horizon-Setup-0.3.56.exe" -Algorithm SHA256
 ```
 
----
-
-<div align="center">
-Novium Ecosystem • Zero Mock Data Standard
-</div>
+Compare the output with the SHA-256 value listed in the **Latest Release** table or in the GitHub Release asset metadata.
