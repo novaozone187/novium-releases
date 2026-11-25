@@ -37,15 +37,15 @@ jobs:
           WAIT_FOR_ASSETS: '1'
         run: node scripts/update-readme.mjs
 
-      - name: Commit and Push Updated README.md
+      - name: Commit and Push Updated README.md & Feeds
         run: |
-          if git diff --quiet README.md; then
-            echo "README.md is already up to date."
+          if git diff --quiet README.md && [ -z "$(git status --porcelain feed/)" ]; then
+            echo "README.md and feeds are already up to date."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           LATEST_TAG=$(node -e "const fs=require('fs');const m=fs.readFileSync('README.md','utf8').match(/Novium Horizon (v[0-9.]+)/);console.log(m?m[1]:'latest')")
-          git add README.md
-          git commit -m "docs: update README for ${LATEST_TAG}"
+          git add README.md feed/
+          git commit -m "docs: update README and feeds for ${LATEST_TAG}"
           git push origin main

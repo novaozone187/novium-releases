@@ -23,7 +23,7 @@ If you are looking at the repository file list above, the Windows installer bina
 3. **Download the installer:** Scroll to the **Assets** section at the bottom of the release notes and download `Novium-Horizon-Setup-0.3.59.exe`.
 4. **Automatic updates:** Once installed, Horizon checks this repository automatically via `electron-updater` (`latest.yml` + `.blockmap`).
 
-> **Availability:** Only **Novium Horizon for Windows (x64)** is currently published. macOS, Linux, Novium Pulsar, and Novium BlackEye are currently unavailable.
+> **Availability:** **Novium Horizon** and **Novium Pulsar** for Windows (x64) are published here. macOS, Linux, and Novium BlackEye are currently unavailable.
 
 > [!IMPORTANT]
 > **Early Development Status:** Novium Horizon is in active early development and is not 100% stable. Hardware hooks, system APIs, and desktop overlays are subject to rapid iteration.
@@ -55,15 +55,30 @@ If you are looking at the repository file list above, the Windows installer bina
 
 ---
 
+## Latest Release: Novium Pulsar v0.1.0 (`pulsar-v0.1.0`)
+
+- **Release Page:** [Novium Pulsar v0.1.0](https://github.com/novaozone187/novium-releases/releases/tag/pulsar-v0.1.0)
+- **Published:** `2026-11-25`
+- **Target:** Windows 10 / 11 (x64)
+- **Updater Feed:** [`feed/pulsar.yml`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feed/pulsar.yml)
+
+| Target | Package | File | Size | SHA-256 |
+|---|---|---|---|---|
+| Windows 10/11 x64 | One-Click NSIS Installer (.exe) | [Novium-Pulsar-Setup-0.1.0.exe](https://github.com/novaozone187/novium-releases/releases/download/pulsar-v0.1.0/Novium-Pulsar-Setup-0.1.0.exe) | 98.1 MB | `2f2059d7b47301bee13971a88c347eedf04210314124885da751496acfbb4e98` |
+| Windows 10/11 x64 | Differential Blockmap | [Novium-Pulsar-Setup-0.1.0.exe.blockmap](https://github.com/novaozone187/novium-releases/releases/download/pulsar-v0.1.0/Novium-Pulsar-Setup-0.1.0.exe.blockmap) | 103.5 KB | `8fea431284a7fd30cd6c811fa3110cb8db0cce0d6ba6d1b70fceb24ed55d5d40` |
+| Auto-Updater | Electron Updater Feed | [pulsar.yml](https://github.com/novaozone187/novium-releases/releases/download/pulsar-v0.1.0/pulsar.yml) | 355 B | `f673cc2d34bb16c5f7f9e476de04ae522d2e9f55e54ad12c0e82b51b25651c31` |
+
+---
+
 ## Recent Releases
 
 | Tag | Published | Installer (.exe) |
 |---|---|---|
 | [v0.3.59](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.59) | 2026-11-23 | [Novium-Horizon-Setup-0.3.59.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.59/Novium-Horizon-Setup-0.3.59.exe) (81.0 MB) |
 | [v0.3.58](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.58) | 2026-11-23 | [Novium-Horizon-Setup-0.3.58.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.58/Novium-Horizon-Setup-0.3.58.exe) (81.0 MB) |
-| [pulsar-v0.1.0](https://github.com/novaozone187/novium-releases/releases/tag/pulsar-v0.1.0) | 2026-11-25 | [Novium-Pulsar-Setup-0.1.0.exe](https://github.com/novaozone187/novium-releases/releases/download/pulsar-v0.1.0/Novium-Pulsar-Setup-0.1.0.exe) (98.1 MB) |
 | [v0.3.57](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.57) | 2026-11-23 | [Novium-Horizon-Setup-0.3.57.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.57/Novium-Horizon-Setup-0.3.57.exe) (81.0 MB) |
 | [v0.3.56](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.56) | 2026-11-19 | [Novium-Horizon-Setup-0.3.56.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.56/Novium-Horizon-Setup-0.3.56.exe) (81.0 MB) |
+| [v0.3.55](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.55) | 2026-11-19 | [Novium-Horizon-Setup-0.3.55.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.55/Novium-Horizon-Setup-0.3.55.exe) (81.0 MB) |
 
 Full archive: [`novaozone187/novium-releases/releases`](https://github.com/novaozone187/novium-releases/releases)
 

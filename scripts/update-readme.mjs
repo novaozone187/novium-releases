@@ -10,6 +10,7 @@ const ALL_RELEASES_URL = `https://github.com/${REPO}/releases`;
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const README_PATH = path.resolve(__dirname, '..', 'README.md');
+const PULSAR_FEED_PATH = path.resolve(__dirname, '..', 'feed', 'pulsar.yml');
 
 const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
 const waitForAssets = process.env.WAIT_FOR_ASSETS === '1';
@@ -88,30 +89,65 @@ async function getReleasesWithRetry() {
   const maxAttempts = waitForAssets ? 5 : 1;
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
     const releases = await fetchJson(
-      `https://api.github.com/repos/${REPO}/releases?per_page=10`,
+      `https://api.github.com/repos/${REPO}/releases?per_page=20`,
     );
     const published = releases.filter((r) => !r.draft && !r.prerelease);
-    const latest = published[0];
-    if (!latest) {
-      throw new Error('No published non-draft releases found.');
+    const horizonReleases = published.filter((r) => !String(r.tag_name || '').startsWith('pulsar-'));
+    const pulsarReleases = published.filter((r) => String(r.tag_name || '').startsWith('pulsar-'));
+    const latestHorizon = horizonReleases[0];
+    if (!latestHorizon) {
+      throw new Error('No published non-draft Horizon releases found.');
     }
 
-    const { primary, latestYml } = selectInstallers(latest.assets);
+    const { primary, latestYml } = selectInstallers(latestHorizon.assets);
     if ((primary && latestYml) || attempt === maxAttempts) {
-      return published;
+      return { horizonReleases, pulsarReleases };
     }
 
     console.log(
-      `Attempt ${attempt}/${maxAttempts}: waiting 15s for installer assets on ${latest.tag_name}...`,
+      `Attempt ${attempt}/${maxAttempts}: waiting 15s for installer assets on ${latestHorizon.tag_name}...`,
     );
     await new Promise((resolve) => setTimeout(resolve, 15000));
   }
-  return [];
+  return { horizonReleases: [], pulsarReleases: [] };
+}
+
+function selectPulsarAssets(assets) {
+  const list = Array.isArray(assets) ? assets : [];
+  const primary =
+    list.find((a) => /^Novium-Pulsar-Setup-.+\.exe$/i.test(a.name ?? '')) ??
+    list.find((a) => /\.exe$/i.test(a.name ?? ''));
+  const blockmap = list.find(
+    (a) => primary && a.name === `${primary.name}.blockmap`,
+  );
+  const pulsarYml = list.find((a) => a.name === 'pulsar.yml');
+  return { primary, blockmap, pulsarYml };
+}
+
+function rewritePulsarFeedYaml(yamlText, downloadUrl) {
+  if (!yamlText || !downloadUrl) return '';
+  let out = yamlText.replace(/^(\s*-\s*url:\s*)([^\r\n]+)/m, `$1${downloadUrl}`);
+  out = out.replace(/^(path:\s*)([^\r\n]+)/m, `$1${downloadUrl}`);
+  return out.endsWith('\n') ? out : `${out}\n`;
 }
 
 async function main() {
-  const releases = await getReleasesWithRetry();
+  const { horizonReleases: releases, pulsarReleases } = await getReleasesWithRetry();
   const latest = releases[0];
+  const latestPulsar = pulsarReleases[0] || null;
+
+  if (latestPulsar) {
+    const { primary: pExe, pulsarYml } = selectPulsarAssets(latestPulsar.assets);
+    if (pExe?.browser_download_url && pulsarYml?.browser_download_url) {
+      const pYamlText = await fetchText(pulsarYml.browser_download_url);
+      const rewritten = rewritePulsarFeedYaml(pYamlText, pExe.browser_download_url);
+      if (rewritten) {
+        await fs.mkdir(path.dirname(PULSAR_FEED_PATH), { recursive: true });
+        await fs.writeFile(PULSAR_FEED_PATH, rewritten, 'utf8');
+        console.log(`Updated ${PULSAR_FEED_PATH} for ${latestPulsar.tag_name}.`);
+      }
+    }
+  }
   const tag = latest.tag_name;
   const version = tag.replace(/^v/, '');
   const publishedDate = (latest.published_at || latest.created_at || '').slice(0, 10);
@@ -191,7 +227,7 @@ async function main() {
     `3. **Download the installer:** Scroll to the **Assets** section at the bottom of the release notes and download \`${primaryFileName}\`.`,
     `4. **Automatic updates:** Once installed, Horizon checks this repository automatically via \`electron-updater\` (\`latest.yml\` + \`.blockmap\`).`,
     ``,
-    `> **Availability:** Only **Novium Horizon for Windows (x64)** is currently published. macOS, Linux, Novium Pulsar, and Novium BlackEye are currently unavailable.`,
+    `> **Availability:** **Novium Horizon** and **Novium Pulsar** for Windows (x64) are published here. macOS, Linux, and Novium BlackEye are currently unavailable.`,
     ``,
     `> [!IMPORTANT]`,
     `> **Early Development Status:** Novium Horizon is in active early development and is not 100% stable. Hardware hooks, system APIs, and desktop overlays are subject to rapid iteration.`,
@@ -221,6 +257,45 @@ async function main() {
           releaseNotes,
           ``,
         ]
+      : []),
+    ...(latestPulsar
+      ? (() => {
+          const pTag = latestPulsar.tag_name;
+          const pVer = pTag.replace(/^pulsar-v/, '');
+          const pDate = (latestPulsar.published_at || latestPulsar.created_at || '').slice(0, 10);
+          const { primary: pExe, blockmap: pBlockmap, pulsarYml } = selectPulsarAssets(latestPulsar.assets);
+          const pRows = [];
+          if (pExe) {
+            pRows.push(
+              `| Windows 10/11 x64 | One-Click NSIS Installer (.exe) | [${pExe.name}](${pExe.browser_download_url}) | ${formatBytes(pExe.size)} | \`${pExe.digest?.replace(/^sha256:/, '') || 'See GitHub release'}\` |`,
+            );
+          }
+          if (pBlockmap) {
+            pRows.push(
+              `| Windows 10/11 x64 | Differential Blockmap | [${pBlockmap.name}](${pBlockmap.browser_download_url}) | ${formatBytes(pBlockmap.size)} | \`${pBlockmap.digest?.replace(/^sha256:/, '') || '—'}\` |`,
+            );
+          }
+          if (pulsarYml) {
+            pRows.push(
+              `| Auto-Updater | Electron Updater Feed | [${pulsarYml.name}](${pulsarYml.browser_download_url}) | ${formatBytes(pulsarYml.size)} | \`${pulsarYml.digest?.replace(/^sha256:/, '') || '—'}\` |`,
+            );
+          }
+          return [
+            `---`,
+            ``,
+            `## Latest Release: Novium Pulsar v${pVer} (\`${pTag}\`)`,
+            ``,
+            `- **Release Page:** [${latestPulsar.name || `Novium Pulsar v${pVer}`}](${latestPulsar.html_url})`,
+            `- **Published:** \`${pDate}\``,
+            `- **Target:** Windows 10 / 11 (x64)`,
+            `- **Updater Feed:** [\`feed/pulsar.yml\`](https://raw.githubusercontent.com/${REPO}/main/feed/pulsar.yml)`,
+            ``,
+            `| Target | Package | File | Size | SHA-256 |`,
+            `|---|---|---|---|---|`,
+            ...pRows,
+            ``,
+          ];
+        })()
       : []),
     `---`,
     ``,
