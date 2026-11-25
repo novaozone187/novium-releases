@@ -61,7 +61,7 @@ If you are looking at the repository file list above, the Windows installer bina
 |---|---|---|
 | [v0.3.59](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.59) | 2026-11-23 | [Novium-Horizon-Setup-0.3.59.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.59/Novium-Horizon-Setup-0.3.59.exe) (81.0 MB) |
 | [v0.3.58](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.58) | 2026-11-23 | [Novium-Horizon-Setup-0.3.58.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.58/Novium-Horizon-Setup-0.3.58.exe) (81.0 MB) |
-| [pulsar-v0.1.0](https://github.com/novaozone187/novium-releases/releases/tag/pulsar-v0.1.0) | 2026-11-25 | — |
+| [pulsar-v0.1.0](https://github.com/novaozone187/novium-releases/releases/tag/pulsar-v0.1.0) | 2026-11-25 | [Novium-Pulsar-Setup-0.1.0.exe](https://github.com/novaozone187/novium-releases/releases/download/pulsar-v0.1.0/Novium-Pulsar-Setup-0.1.0.exe) (98.1 MB) |
 | [v0.3.57](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.57) | 2026-11-23 | [Novium-Horizon-Setup-0.3.57.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.57/Novium-Horizon-Setup-0.3.57.exe) (81.0 MB) |
 | [v0.3.56](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.56) | 2026-11-19 | [Novium-Horizon-Setup-0.3.56.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.56/Novium-Horizon-Setup-0.3.56.exe) (81.0 MB) |
 
