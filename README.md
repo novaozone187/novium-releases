@@ -43,6 +43,7 @@ If you are looking at the repository file list above, the Windows installer bina
 | Target | Package | File | Size | SHA-256 |
 |---|---|---|---|---|
 | Windows 10/11 x64 | One-Click NSIS Installer (.exe) | [Novium-Horizon-Setup-0.3.61.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.61/Novium-Horizon-Setup-0.3.61.exe) | 81.0 MB | `e1bfaca7ed6ad6d3f63a5267d71ca975ca2ff9c05b206f0f27778c39e0562862` |
+| Windows 10/11 x64 | Compatibility Alias (.exe) | [Novium.Horizon.Setup.0.3.61.exe](https://github.com/novaozone187/novium-releases/releases/download/v0.3.61/Novium.Horizon.Setup.0.3.61.exe) | 81.0 MB | `e1bfaca7ed6ad6d3f63a5267d71ca975ca2ff9c05b206f0f27778c39e0562862` |
 | Windows 10/11 x64 | Differential Blockmap | [Novium-Horizon-Setup-0.3.61.exe.blockmap](https://github.com/novaozone187/novium-releases/releases/download/v0.3.61/Novium-Horizon-Setup-0.3.61.exe.blockmap) | 86.6 KB | `1aede3762b39673e84153218643d45975dee25be5d8eb94d9bb9093aaf5b8e25` |
 | Auto-Updater | Electron Updater Feed | [latest.yml](https://github.com/novaozone187/novium-releases/releases/download/v0.3.61/latest.yml) | 359 B | `bbbe8e6244df6579a4bfa6bc4005b002bea8ce46c78ceb915290305ee818a1a5` |
 
