@@ -1,8 +1,8 @@
-version: 0.1.0
+version: 0.1.1
 files:
-  - url: https://github.com/novaozone187/novium-releases/releases/download/pulsar-v0.1.0/Novium-Pulsar-Setup-0.1.0.exe
-    sha512: ZkXDPOuoNMESWmktbAlCP/xz1zShCw8ySh9f3Dou8DyjM35VwZdmh8Jifhwc6sLBJIvtyZdCcNUIG4JbqkoGuA==
-    size: 102855368
-path: https://github.com/novaozone187/novium-releases/releases/download/pulsar-v0.1.0/Novium-Pulsar-Setup-0.1.0.exe
-sha512: ZkXDPOuoNMESWmktbAlCP/xz1zShCw8ySh9f3Dou8DyjM35VwZdmh8Jifhwc6sLBJIvtyZdCcNUIG4JbqkoGuA==
-releaseDate: '2026-11-25T14:00:29.800Z'
+  - url: https://github.com/novaozone187/novium-releases/releases/download/pulsar-v0.1.1/Novium-Pulsar-Setup-0.1.1.exe
+    sha512: hSEHAxYSPZKF+3a9Vrr8H/oRyBvb8gF6PER0lLfDiZgcjiHfRHm2/qvCMK5FvTnqd/wEPDIxbFTHkx35inh3DA==
+    size: 102922524
+path: https://github.com/novaozone187/novium-releases/releases/download/pulsar-v0.1.1/Novium-Pulsar-Setup-0.1.1.exe
+sha512: hSEHAxYSPZKF+3a9Vrr8H/oRyBvb8gF6PER0lLfDiZgcjiHfRHm2/qvCMK5FvTnqd/wEPDIxbFTHkx35inh3DA==
+releaseDate: '2026-11-26T19:33:15.243Z'
