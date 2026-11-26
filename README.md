@@ -67,6 +67,8 @@ If you are looking at the repository file list above, the Windows installer bina
 
 | Target | Package | File | Size | SHA-256 |
 |---|---|---|---|---|
+| Windows 10/11 x64 | One-Click NSIS Installer (.exe) | [Novium-Pulsar-Setup-0.1.2.exe](https://github.com/novaozone187/novium-releases/releases/download/pulsar-v0.1.2/Novium-Pulsar-Setup-0.1.2.exe) | 98.2 MB | `88bb50e385e74b55185f06a3eb2e0a4acc1680df577f392961afa261fd178d1d` |
+| Windows 10/11 x64 | Differential Blockmap | [Novium-Pulsar-Setup-0.1.2.exe.blockmap](https://github.com/novaozone187/novium-releases/releases/download/pulsar-v0.1.2/Novium-Pulsar-Setup-0.1.2.exe.blockmap) | 104.3 KB | `f295e4fb84f511afdefde2ec762f04a669fedb3d3bffed3321b937239f1ffc01` |
 | Auto-Updater | Electron Updater Feed | [pulsar.yml](https://github.com/novaozone187/novium-releases/releases/download/pulsar-v0.1.2/pulsar.yml) | 355 B | `3de859a5829e66823af46c67a53d7eff7c6de8dbc74df1f6423865515412530c` |
 
 ---
