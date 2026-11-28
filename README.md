@@ -23,7 +23,7 @@ If you are looking at the repository file list above, the Windows installer bina
 3. **Download the installer:** Scroll to the **Assets** section at the bottom of the release notes and download `Novium-Horizon-Setup-0.3.62.exe`.
 4. **Automatic updates:** Once installed, Horizon checks this repository automatically via `electron-updater` (`latest.yml` + `.blockmap`).
 
-> **Availability:** **Novium Horizon** and **Novium Pulsar** for Windows (x64) are published here. macOS, Linux, and Novium BlackEye are currently unavailable.
+> **Availability:** **Novium Horizon**, **Novium Pulsar**, and **Novium BlackEye** for Windows (x64) are published here. macOS and Linux builds are currently unavailable.
 
 > [!IMPORTANT]
 > **Early Development Status:** Novium Horizon is in active early development and is not 100% stable. Hardware hooks, system APIs, and desktop overlays are subject to rapid iteration.
@@ -68,6 +68,18 @@ If you are looking at the repository file list above, the Windows installer bina
 | Windows 10/11 x64 | One-Click NSIS Installer (.exe) | [Novium-Pulsar-Setup-0.1.3.exe](https://github.com/novaozone187/novium-releases/releases/download/pulsar-v0.1.3/Novium-Pulsar-Setup-0.1.3.exe) | 98.2 MB | `bd71e3b03d5882ece790b68921f10138edc346ee53dfe43f6840eec65154d02a` |
 | Windows 10/11 x64 | Differential Blockmap | [Novium-Pulsar-Setup-0.1.3.exe.blockmap](https://github.com/novaozone187/novium-releases/releases/download/pulsar-v0.1.3/Novium-Pulsar-Setup-0.1.3.exe.blockmap) | 104.1 KB | `83b4fffe3d7fb5cd0b7da9e1295d961e990d62b1e883911cc2b55fe3657235c6` |
 | Auto-Updater | Electron Updater Feed | [pulsar.yml](https://github.com/novaozone187/novium-releases/releases/download/pulsar-v0.1.3/pulsar.yml) | 355 B | `28f3201fba42518e42d9b977f68430c282bcaf65946a7bc384ae34aa84e13ce1` |
+
+---
+
+## Latest Release: Novium BlackEye v0.1.0 (`blackeye-v0.1.0`)
+
+- **Release Page:** [Novium BlackEye v0.1.0](https://github.com/novaozone187/novium-releases/releases/tag/blackeye-v0.1.0)
+- **Published:** `2026-11-28`
+- **Target:** Windows 10 / 11 (x64)
+- **Updater Feed:** [`feeds/blackeye/latest.yml`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/blackeye/latest.yml)
+
+| Target | Package | File | Size | SHA-256 |
+|---|---|---|---|---|
 
 ---
 
