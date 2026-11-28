@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "name": "blackeye-daemon",
+  "version": "0.1.0",
+  "channel": "stable",
+  "protocolVersion": 2,
+  "minCompatibleVersion": "0.1.0",
+  "runtime": "node-bundle",
+  "publishedAt": "2026-11-28T15:08:57Z",
+  "releaseNotes": "Autonomous dual-mode security sentry with Pulsar-linked inspection and OS fallback.",
+  "artifacts": {
+    "win32-x64": {
+      "url": "https://github.com/novaozone187/novium-releases/releases/download/blackeye-daemon-v0.1.0/blackeye-daemon-0.1.0-win32-x64.zip",
+      "sha256": "b8e0e4d1624e618adbebe7611ab99c78cc21e418221e8691868621061ede721b",
+      "size": 5192129,
+      "entrypoint": "bin/blackeye-daemon.cmd"
+    },
+    "linux-x64": {
+      "url": "https://github.com/novaozone187/novium-releases/releases/download/blackeye-daemon-v0.1.0/blackeye-daemon-0.1.0-linux-x64.tar.gz",
+      "sha256": "b49df0a1aa7892a853cbbf80bd24f2904f5725587ebe694d8b3637b31895fbc8",
+      "size": 5042454,
+      "entrypoint": "bin/blackeye-daemon"
+    }
+  }
+}

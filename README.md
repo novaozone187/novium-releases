@@ -2,34 +2,31 @@
 
 # Novium Releases
 
-[![Latest Release](https://img.shields.io/badge/LATEST%20RELEASE-v0.3.62-10b981?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
-[![Platform](https://img.shields.io/badge/PLATFORM-WINDOWS%2010%20%7C%2011%20x64-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
+[![Latest Horizon](https://img.shields.io/badge/HORIZON-v0.3.62-10b981?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
+[![Latest Pulsar](https://img.shields.io/badge/PULSAR-v0.1.3-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/tag/pulsar-v0.1.3)
+[![Latest BlackEye](https://img.shields.io/badge/BLACKEYE-v0.1.0-ef4444?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/tag/blackeye-v0.1.0)
 [![Downloads Page](https://img.shields.io/badge/WEBSITE-DOWNLOADS-f4f4f5?style=for-the-badge&labelColor=050608)](https://noviumecosystem.vercel.app/download)
 
-Public Windows binary distribution and differential auto-updater feed for **Novium Horizon**.
+Unified binary distribution, auto-updater feeds (`feeds/`), and daemon bundles for **Novium Horizon**, **Novium Pulsar**, **Novium BlackEye**, **pulsar-daemon**, and **blackeye-daemon**.
 
-[**Go to Latest Release (v0.3.62)**](https://github.com/novaozone187/novium-releases/releases/latest) • [**Browse All Releases**](https://github.com/novaozone187/novium-releases/releases) • [**Website Downloads**](https://noviumecosystem.vercel.app/download) • [**Main Source Repository**](https://github.com/novaozone187/Novium)
+[**Latest Horizon (v0.3.62)**](https://github.com/novaozone187/novium-releases/releases/latest) • [**All Releases**](https://github.com/novaozone187/novium-releases/releases) • [**Index Manifest (`manifest.json`)**](https://raw.githubusercontent.com/novaozone187/novium-releases/main/manifest.json) • [**Source Repository**](https://github.com/novaozone187/Novium)
 
 </div>
 
 ---
 
-## How to Get to the Releases Page & Download
+## Release Matrix (3 Apps + 2 Daemons)
 
-If you are looking at the repository file list above, the Windows installer binaries live under **GitHub Releases** — not in the Git source tree:
-
-1. **Direct shortcut:** Open [**Latest Release (v0.3.62)**](https://github.com/novaozone187/novium-releases/releases/latest) or [**All Releases**](https://github.com/novaozone187/novium-releases/releases).
-2. **From the GitHub repository page:** Look at the **Releases** section in the right-hand sidebar of [`novaozone187/novium-releases`](https://github.com/novaozone187/novium-releases) and click the release marked **Latest**.
-3. **Download the installer:** Scroll to the **Assets** section at the bottom of the release notes and download `Novium-Horizon-Setup-0.3.62.exe`.
-4. **Automatic updates:** Once installed, Horizon checks this repository automatically via `electron-updater` (`latest.yml` + `.blockmap`).
-
-> **Availability:** **Novium Horizon**, **Novium Pulsar**, and **Novium BlackEye** for Windows (x64) are published here. macOS and Linux builds are currently unavailable.
-
-> [!IMPORTANT]
-> **Early Development Status:** Novium Horizon is in active early development and is not 100% stable. Hardware hooks, system APIs, and desktop overlays are subject to rapid iteration.
+| Component | Latest Tag | Platforms | Update Feed |
+|---|---|---|---|
+| **Novium Horizon** | `v0.3.62` | Windows x64 | [`feeds/horizon/latest.yml`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/horizon/latest.yml) |
+| **Novium Pulsar** | `pulsar-v0.1.3` | Windows x64 | [`feeds/pulsar/latest.yml`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/pulsar/latest.yml) |
+| **Novium BlackEye** | `blackeye-v0.1.0` | Windows x64 | [`feeds/blackeye/latest.yml`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/blackeye/latest.yml) |
+| **Pulsar Daemon** | `pulsar-daemon-v0.1.0` | Win x64 / Linux x64 | [`feeds/daemons/pulsar-daemon.json`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/daemons/pulsar-daemon.json) |
+| **BlackEye Daemon** | `blackeye-daemon-v0.1.0` | Win x64 / Linux x64 | [`feeds/daemons/blackeye-daemon.json`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/daemons/blackeye-daemon.json) |
 
 > [!NOTE]
-> **Windows SmartScreen Notice:** Because Novium is a free, non-commercial open-source project without a commercial EV code-signing certificate (§§ 106–112 BGB), Windows SmartScreen or your browser may prompt on unsigned `.exe` files. Click **"More info"** → **"Run anyway"** (or **"Keep anyway"** in your browser) to proceed.
+> **Windows SmartScreen Notice:** Because Novium is a free, non-commercial open-source project without a commercial EV code-signing certificate (§§ 106–112 BGB), Windows SmartScreen may prompt on unsigned `.exe` installers. Click **"More info"** → **"Run anyway"** to proceed.
 
 ---
 
@@ -37,8 +34,8 @@ If you are looking at the repository file list above, the Windows installer bina
 
 - **Release Page:** [Novium Horizon v0.3.62](https://github.com/novaozone187/novium-releases/releases/tag/v0.3.62)
 - **Published:** `2026-11-26`
-- **Target:** Windows 10 / 11 (x64)
-- **Installer SHA-512 (`latest.yml`):** `yPsALPqKO9qJcU6lDw4defRaTTDY4BPg0VoSs1YgjYQ6Q9dAtw4HjIPdZFcmmSzdV6jPqSnWIla5vSWMvgpVAQ==`
+- **Updater Feed:** [`feeds/horizon/latest.yml`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/horizon/latest.yml)
+- **Installer SHA-512:** `yPsALPqKO9qJcU6lDw4defRaTTDY4BPg0VoSs1YgjYQ6Q9dAtw4HjIPdZFcmmSzdV6jPqSnWIla5vSWMvgpVAQ==`
 
 | Target | Package | File | Size | SHA-256 |
 |---|---|---|---|---|
@@ -56,37 +53,63 @@ If you are looking at the repository file list above, the Windows installer bina
 
 ---
 
-## Latest Release: Novium Pulsar v0.1.3 (`pulsar-v0.1.3`)
+## Latest Release: Novium Pulsar (`pulsar-v0.1.3`)
 
 - **Release Page:** [Novium Pulsar v0.1.3](https://github.com/novaozone187/novium-releases/releases/tag/pulsar-v0.1.3)
 - **Published:** `2026-11-26`
-- **Target:** Windows 10 / 11 (x64)
-- **Updater Feed:** [`feed/pulsar.yml`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feed/pulsar.yml)
+- **Updater Feed:** [`feeds/pulsar/latest.yml`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/pulsar/latest.yml)
 
 | Target | Package | File | Size | SHA-256 |
 |---|---|---|---|---|
 | Windows 10/11 x64 | One-Click NSIS Installer (.exe) | [Novium-Pulsar-Setup-0.1.3.exe](https://github.com/novaozone187/novium-releases/releases/download/pulsar-v0.1.3/Novium-Pulsar-Setup-0.1.3.exe) | 98.2 MB | `bd71e3b03d5882ece790b68921f10138edc346ee53dfe43f6840eec65154d02a` |
+| Windows 10/11 x64 | Compatibility Alias (.exe) | [Novium.Pulsar.Setup.0.1.3.exe](https://github.com/novaozone187/novium-releases/releases/download/pulsar-v0.1.3/Novium.Pulsar.Setup.0.1.3.exe) | 98.2 MB | `bd71e3b03d5882ece790b68921f10138edc346ee53dfe43f6840eec65154d02a` |
 | Windows 10/11 x64 | Differential Blockmap | [Novium-Pulsar-Setup-0.1.3.exe.blockmap](https://github.com/novaozone187/novium-releases/releases/download/pulsar-v0.1.3/Novium-Pulsar-Setup-0.1.3.exe.blockmap) | 104.1 KB | `83b4fffe3d7fb5cd0b7da9e1295d961e990d62b1e883911cc2b55fe3657235c6` |
 | Auto-Updater | Electron Updater Feed | [pulsar.yml](https://github.com/novaozone187/novium-releases/releases/download/pulsar-v0.1.3/pulsar.yml) | 355 B | `28f3201fba42518e42d9b977f68430c282bcaf65946a7bc384ae34aa84e13ce1` |
 
 ---
 
-## Latest Release: Novium BlackEye v0.1.0 (`blackeye-v0.1.0`)
+## Latest Release: Novium BlackEye (`blackeye-v0.1.0`)
 
 - **Release Page:** [Novium BlackEye v0.1.0](https://github.com/novaozone187/novium-releases/releases/tag/blackeye-v0.1.0)
 - **Published:** `2026-11-28`
-- **Target:** Windows 10 / 11 (x64)
 - **Updater Feed:** [`feeds/blackeye/latest.yml`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/blackeye/latest.yml)
 
 | Target | Package | File | Size | SHA-256 |
 |---|---|---|---|---|
 | Windows 10/11 x64 | One-Click NSIS Installer (.exe) | [Novium-BlackEye-Setup-0.1.0.exe](https://github.com/novaozone187/novium-releases/releases/download/blackeye-v0.1.0/Novium-BlackEye-Setup-0.1.0.exe) | 80.7 MB | `4c3384635d575f7ab40e35e428d895cb600b9ad329515515551160af50f48425` |
+| Windows 10/11 x64 | Compatibility Alias (.exe) | [Novium.BlackEye.Setup.0.1.0.exe](https://github.com/novaozone187/novium-releases/releases/download/blackeye-v0.1.0/Novium.BlackEye.Setup.0.1.0.exe) | 80.7 MB | `4c3384635d575f7ab40e35e428d895cb600b9ad329515515551160af50f48425` |
 | Windows 10/11 x64 | Differential Blockmap | [Novium-BlackEye-Setup-0.1.0.exe.blockmap](https://github.com/novaozone187/novium-releases/releases/download/blackeye-v0.1.0/Novium-BlackEye-Setup-0.1.0.exe.blockmap) | 86.1 KB | `69a8908982d20c722553a12a1996b45efa53d14b26bbeaf606616d22f45c74c1` |
 | Auto-Updater | Electron Updater Feed | [latest.yml](https://github.com/novaozone187/novium-releases/releases/download/blackeye-v0.1.0/latest.yml) | 358 B | `85c560a3071016f6e5b5fffc2e2d252f8574a6725009df468581db6a047fedd2` |
 
 ---
 
-## Recent Releases
+## Daemon Feed: pulsar-daemon (`pulsar-daemon-v0.1.0`)
+
+- **Release Page:** [pulsar-daemon v0.1.0](https://github.com/novaozone187/novium-releases/releases/tag/pulsar-daemon-v0.1.0)
+- **Published:** `2026-11-28`
+- **Daemon Feed:** [`feeds/daemons/pulsar-daemon.json`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/daemons/pulsar-daemon.json)
+
+| Platform | Package | File | Size | SHA-256 |
+|---|---|---|---|---|
+| `win32-x64` | Daemon Bundle | [pulsar-daemon-0.1.0-win32-x64.zip](https://github.com/novaozone187/novium-releases/releases/download/pulsar-daemon-v0.1.0/pulsar-daemon-0.1.0-win32-x64.zip) | 5.0 MB | `f8cd59681d01437480468115021258735b653ac03338b66607eeffc1b6258ea9` |
+| `linux-x64` | Daemon Bundle | [pulsar-daemon-0.1.0-linux-x64.tar.gz](https://github.com/novaozone187/novium-releases/releases/download/pulsar-daemon-v0.1.0/pulsar-daemon-0.1.0-linux-x64.tar.gz) | 4.8 MB | `e07192be6fe8aa6849d91aead74eea492c59dfd7ce634db03074f9a3c09f7ec2` |
+
+---
+
+## Daemon Feed: blackeye-daemon (`blackeye-daemon-v0.1.0`)
+
+- **Release Page:** [blackeye-daemon v0.1.0](https://github.com/novaozone187/novium-releases/releases/tag/blackeye-daemon-v0.1.0)
+- **Published:** `2026-11-28`
+- **Daemon Feed:** [`feeds/daemons/blackeye-daemon.json`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/daemons/blackeye-daemon.json)
+
+| Platform | Package | File | Size | SHA-256 |
+|---|---|---|---|---|
+| `win32-x64` | Daemon Bundle | [blackeye-daemon-0.1.0-win32-x64.zip](https://github.com/novaozone187/novium-releases/releases/download/blackeye-daemon-v0.1.0/blackeye-daemon-0.1.0-win32-x64.zip) | 5.0 MB | `b8e0e4d1624e618adbebe7611ab99c78cc21e418221e8691868621061ede721b` |
+| `linux-x64` | Daemon Bundle | [blackeye-daemon-0.1.0-linux-x64.tar.gz](https://github.com/novaozone187/novium-releases/releases/download/blackeye-daemon-v0.1.0/blackeye-daemon-0.1.0-linux-x64.tar.gz) | 4.8 MB | `b49df0a1aa7892a853cbbf80bd24f2904f5725587ebe694d8b3637b31895fbc8` |
+
+---
+
+## Recent Horizon Releases
 
 | Tag | Published | Installer (.exe) |
 |---|---|---|
@@ -105,5 +128,3 @@ Full archive: [`novaozone187/novium-releases/releases`](https://github.com/novao
 ```powershell
 Get-FileHash -Path "Novium-Horizon-Setup-0.3.62.exe" -Algorithm SHA256
 ```
-
-Compare the output with the SHA-256 value listed in the **Latest Release** table or in the GitHub Release asset metadata.

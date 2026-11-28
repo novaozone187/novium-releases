@@ -1,0 +1,8 @@
+version: 0.3.62
+files:
+  - url: https://github.com/novaozone187/novium-releases/releases/download/v0.3.62/Novium-Horizon-Setup-0.3.62.exe
+    sha512: yPsALPqKO9qJcU6lDw4defRaTTDY4BPg0VoSs1YgjYQ6Q9dAtw4HjIPdZFcmmSzdV6jPqSnWIla5vSWMvgpVAQ==
+    size: 84905079
+path: https://github.com/novaozone187/novium-releases/releases/download/v0.3.62/Novium-Horizon-Setup-0.3.62.exe
+sha512: yPsALPqKO9qJcU6lDw4defRaTTDY4BPg0VoSs1YgjYQ6Q9dAtw4HjIPdZFcmmSzdV6jPqSnWIla5vSWMvgpVAQ==
+releaseDate: '2026-11-26T20:01:01.768Z'
