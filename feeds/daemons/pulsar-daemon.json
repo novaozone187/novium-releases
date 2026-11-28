@@ -1,24 +1,24 @@
 {
   "schemaVersion": 1,
   "name": "pulsar-daemon",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "channel": "stable",
   "protocolVersion": 2,
   "minCompatibleVersion": "0.1.0",
   "runtime": "node-bundle",
-  "publishedAt": "2026-11-28T15:08:46Z",
+  "publishedAt": "2026-11-28T16:39:20Z",
   "releaseNotes": "Leaderless SWIM + HLC CRDT gossip, relay shaping, and elected phone dashboard.",
   "artifacts": {
     "win32-x64": {
-      "url": "https://github.com/novaozone187/novium-releases/releases/download/pulsar-daemon-v0.1.0/pulsar-daemon-0.1.0-win32-x64.zip",
-      "sha256": "f8cd59681d01437480468115021258735b653ac03338b66607eeffc1b6258ea9",
-      "size": 5223920,
+      "url": "https://github.com/novaozone187/novium-releases/releases/download/pulsar-daemon-v0.1.1/pulsar-daemon-0.1.1-win32-x64.zip",
+      "sha256": "42a0ceb015fcd46720dcb80877aec379e051225485955781a977eddd03fdf61c",
+      "size": 5229012,
       "entrypoint": "bin/pulsar-daemon.cmd"
     },
     "linux-x64": {
-      "url": "https://github.com/novaozone187/novium-releases/releases/download/pulsar-daemon-v0.1.0/pulsar-daemon-0.1.0-linux-x64.tar.gz",
-      "sha256": "e07192be6fe8aa6849d91aead74eea492c59dfd7ce634db03074f9a3c09f7ec2",
-      "size": 5071216,
+      "url": "https://github.com/novaozone187/novium-releases/releases/download/pulsar-daemon-v0.1.1/pulsar-daemon-0.1.1-linux-x64.tar.gz",
+      "sha256": "e46ba24531cd0f7f9b29dd9416646a994c1c18fed2902a3ac0671d295b28c4d2",
+      "size": 5076501,
       "entrypoint": "bin/pulsar-daemon"
     }
   }

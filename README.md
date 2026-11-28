@@ -22,8 +22,8 @@ Unified binary distribution, auto-updater feeds (`feeds/`), and daemon bundles f
 | **Novium Horizon** | `v0.3.62` | Windows x64 | [`feeds/horizon/latest.yml`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/horizon/latest.yml) |
 | **Novium Pulsar** | `pulsar-v0.1.3` | Windows x64 | [`feeds/pulsar/latest.yml`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/pulsar/latest.yml) |
 | **Novium BlackEye** | `blackeye-v0.1.0` | Windows x64 | [`feeds/blackeye/latest.yml`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/blackeye/latest.yml) |
-| **Pulsar Daemon** | `pulsar-daemon-v0.1.0` | Win x64 / Linux x64 | [`feeds/daemons/pulsar-daemon.json`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/daemons/pulsar-daemon.json) |
-| **BlackEye Daemon** | `blackeye-daemon-v0.1.0` | Win x64 / Linux x64 | [`feeds/daemons/blackeye-daemon.json`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/daemons/blackeye-daemon.json) |
+| **Pulsar Daemon** | `pulsar-daemon-v0.1.1` | Win x64 / Linux x64 | [`feeds/daemons/pulsar-daemon.json`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/daemons/pulsar-daemon.json) |
+| **BlackEye Daemon** | `blackeye-daemon-v0.1.1` | Win x64 / Linux x64 | [`feeds/daemons/blackeye-daemon.json`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/daemons/blackeye-daemon.json) |
 
 > [!NOTE]
 > **Windows SmartScreen Notice:** Because Novium is a free, non-commercial open-source project without a commercial EV code-signing certificate (§§ 106–112 BGB), Windows SmartScreen may prompt on unsigned `.exe` installers. Click **"More info"** → **"Run anyway"** to proceed.
@@ -83,29 +83,29 @@ Unified binary distribution, auto-updater feeds (`feeds/`), and daemon bundles f
 
 ---
 
-## Daemon Feed: pulsar-daemon (`pulsar-daemon-v0.1.0`)
+## Daemon Feed: pulsar-daemon (`pulsar-daemon-v0.1.1`)
 
-- **Release Page:** [pulsar-daemon v0.1.0](https://github.com/novaozone187/novium-releases/releases/tag/pulsar-daemon-v0.1.0)
+- **Release Page:** [pulsar-daemon v0.1.1](https://github.com/novaozone187/novium-releases/releases/tag/pulsar-daemon-v0.1.1)
 - **Published:** `2026-11-28`
 - **Daemon Feed:** [`feeds/daemons/pulsar-daemon.json`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/daemons/pulsar-daemon.json)
 
 | Platform | Package | File | Size | SHA-256 |
 |---|---|---|---|---|
-| `win32-x64` | Daemon Bundle | [pulsar-daemon-0.1.0-win32-x64.zip](https://github.com/novaozone187/novium-releases/releases/download/pulsar-daemon-v0.1.0/pulsar-daemon-0.1.0-win32-x64.zip) | 5.0 MB | `f8cd59681d01437480468115021258735b653ac03338b66607eeffc1b6258ea9` |
-| `linux-x64` | Daemon Bundle | [pulsar-daemon-0.1.0-linux-x64.tar.gz](https://github.com/novaozone187/novium-releases/releases/download/pulsar-daemon-v0.1.0/pulsar-daemon-0.1.0-linux-x64.tar.gz) | 4.8 MB | `e07192be6fe8aa6849d91aead74eea492c59dfd7ce634db03074f9a3c09f7ec2` |
+| `win32-x64` | Daemon Bundle | [pulsar-daemon-0.1.1-win32-x64.zip](https://github.com/novaozone187/novium-releases/releases/download/pulsar-daemon-v0.1.1/pulsar-daemon-0.1.1-win32-x64.zip) | 5.0 MB | `42a0ceb015fcd46720dcb80877aec379e051225485955781a977eddd03fdf61c` |
+| `linux-x64` | Daemon Bundle | [pulsar-daemon-0.1.1-linux-x64.tar.gz](https://github.com/novaozone187/novium-releases/releases/download/pulsar-daemon-v0.1.1/pulsar-daemon-0.1.1-linux-x64.tar.gz) | 4.8 MB | `e46ba24531cd0f7f9b29dd9416646a994c1c18fed2902a3ac0671d295b28c4d2` |
 
 ---
 
-## Daemon Feed: blackeye-daemon (`blackeye-daemon-v0.1.0`)
+## Daemon Feed: blackeye-daemon (`blackeye-daemon-v0.1.1`)
 
-- **Release Page:** [blackeye-daemon v0.1.0](https://github.com/novaozone187/novium-releases/releases/tag/blackeye-daemon-v0.1.0)
+- **Release Page:** [blackeye-daemon v0.1.1](https://github.com/novaozone187/novium-releases/releases/tag/blackeye-daemon-v0.1.1)
 - **Published:** `2026-11-28`
 - **Daemon Feed:** [`feeds/daemons/blackeye-daemon.json`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/daemons/blackeye-daemon.json)
 
 | Platform | Package | File | Size | SHA-256 |
 |---|---|---|---|---|
-| `win32-x64` | Daemon Bundle | [blackeye-daemon-0.1.0-win32-x64.zip](https://github.com/novaozone187/novium-releases/releases/download/blackeye-daemon-v0.1.0/blackeye-daemon-0.1.0-win32-x64.zip) | 5.0 MB | `b8e0e4d1624e618adbebe7611ab99c78cc21e418221e8691868621061ede721b` |
-| `linux-x64` | Daemon Bundle | [blackeye-daemon-0.1.0-linux-x64.tar.gz](https://github.com/novaozone187/novium-releases/releases/download/blackeye-daemon-v0.1.0/blackeye-daemon-0.1.0-linux-x64.tar.gz) | 4.8 MB | `b49df0a1aa7892a853cbbf80bd24f2904f5725587ebe694d8b3637b31895fbc8` |
+| `win32-x64` | Daemon Bundle | [blackeye-daemon-0.1.1-win32-x64.zip](https://github.com/novaozone187/novium-releases/releases/download/blackeye-daemon-v0.1.1/blackeye-daemon-0.1.1-win32-x64.zip) | 5.0 MB | `a07fd277eec732d4c5dd95b5d4152c79a36f18fe5b1640198cccbad075715f6f` |
+| `linux-x64` | Daemon Bundle | [blackeye-daemon-0.1.1-linux-x64.tar.gz](https://github.com/novaozone187/novium-releases/releases/download/blackeye-daemon-v0.1.1/blackeye-daemon-0.1.1-linux-x64.tar.gz) | 4.8 MB | `c6d1d1b4cee03c99b77dd8e0e4fdb109c8d534dfb63ab72e5ee319ed0d6b4045` |
 
 ---
 

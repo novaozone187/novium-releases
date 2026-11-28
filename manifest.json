@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-28T15:09:16.357Z",
+  "generatedAt": "2026-11-28T16:39:37.354Z",
   "apps": {
     "horizon": {
       "version": "0.3.62",
@@ -48,13 +48,13 @@
   "daemons": {
     "pulsar-daemon": {
       "manifestUrl": "https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/daemons/pulsar-daemon.json",
-      "version": "0.1.0",
-      "tag": "pulsar-daemon-v0.1.0"
+      "version": "0.1.1",
+      "tag": "pulsar-daemon-v0.1.1"
     },
     "blackeye-daemon": {
       "manifestUrl": "https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/daemons/blackeye-daemon.json",
-      "version": "0.1.0",
-      "tag": "blackeye-daemon-v0.1.0"
+      "version": "0.1.1",
+      "tag": "blackeye-daemon-v0.1.1"
     }
   }
 }
