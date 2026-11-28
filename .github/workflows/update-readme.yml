@@ -1,4 +1,4 @@
-name: Update Release README
+name: Update Release README & Feeds
 
 on:
   release:
@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   update-readme:
-    name: Sync README to Latest Release
+    name: Sync README, Manifest & Feeds
     runs-on: ubuntu-latest
 
     steps:
@@ -31,21 +31,21 @@ jobs:
         with:
           node-version: 22
 
-      - name: Regenerate README.md from GitHub Releases
+      - name: Regenerate README.md, manifest.json & feeds/
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WAIT_FOR_ASSETS: '1'
-        run: node scripts/update-readme.mjs
+        run: node scripts/update-feeds.mjs
 
-      - name: Commit and Push Updated README.md & Feeds
+      - name: Commit and Push Updated Feeds, Manifest & README
         run: |
-          if git diff --quiet README.md && [ -z "$(git status --porcelain feed/)" ]; then
-            echo "README.md and feeds are already up to date."
+          if [ -z "$(git status --porcelain README.md manifest.json feeds/ feed/)" ]; then
+            echo "README.md, manifest.json, and feeds are already up to date."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          LATEST_TAG=$(node -e "const fs=require('fs');const m=fs.readFileSync('README.md','utf8').match(/Novium Horizon (v[0-9.]+)/);console.log(m?m[1]:'latest')")
-          git add README.md feed/
-          git commit -m "docs: update README and feeds for ${LATEST_TAG}"
+          LATEST_TAG=$(node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('manifest.json','utf8'));console.log(m.apps?.horizon?.tag || 'latest')")
+          git add README.md manifest.json feeds/ feed/
+          git commit -m "docs: sync feeds, manifest and README (${LATEST_TAG})"
           git push origin main
