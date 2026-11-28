@@ -80,6 +80,8 @@ If you are looking at the repository file list above, the Windows installer bina
 
 | Target | Package | File | Size | SHA-256 |
 |---|---|---|---|---|
+| Windows 10/11 x64 | One-Click NSIS Installer (.exe) | [Novium-BlackEye-Setup-0.1.0.exe](https://github.com/novaozone187/novium-releases/releases/download/blackeye-v0.1.0/Novium-BlackEye-Setup-0.1.0.exe) | 80.7 MB | `4c3384635d575f7ab40e35e428d895cb600b9ad329515515551160af50f48425` |
+| Windows 10/11 x64 | Differential Blockmap | [Novium-BlackEye-Setup-0.1.0.exe.blockmap](https://github.com/novaozone187/novium-releases/releases/download/blackeye-v0.1.0/Novium-BlackEye-Setup-0.1.0.exe.blockmap) | 86.1 KB | `69a8908982d20c722553a12a1996b45efa53d14b26bbeaf606616d22f45c74c1` |
 
 ---
 
