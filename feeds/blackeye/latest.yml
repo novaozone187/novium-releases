@@ -1,8 +1,8 @@
-version: 0.1.0
+version: 0.1.1
 files:
-  - url: https://github.com/novaozone187/novium-releases/releases/download/blackeye-v0.1.0/Novium-BlackEye-Setup-0.1.0.exe
-    sha512: 6+hK4UhTGjvZBDZrB/tZhRLmPGX1sfJ4h8wvFaS5yrmU6OLBu02RI3zTqOgKhqJLCmaMXatvVm9egzd2/RL4uQ==
-    size: 84657558
-path: https://github.com/novaozone187/novium-releases/releases/download/blackeye-v0.1.0/Novium-BlackEye-Setup-0.1.0.exe
-sha512: 6+hK4UhTGjvZBDZrB/tZhRLmPGX1sfJ4h8wvFaS5yrmU6OLBu02RI3zTqOgKhqJLCmaMXatvVm9egzd2/RL4uQ==
-releaseDate: '2026-11-28T15:02:33.450Z'
+  - url: https://github.com/novaozone187/novium-releases/releases/download/blackeye-v0.1.1/Novium-BlackEye-Setup-0.1.1.exe
+    sha512: oNuyuroAJ++YAyD6LS0iE0lENC30sOFnzTGNGjX0LsIg/Pz9K9b0MojhHLNwueoVXVTLSMdws1z17OgbMOrtDw==
+    size: 84669224
+path: https://github.com/novaozone187/novium-releases/releases/download/blackeye-v0.1.1/Novium-BlackEye-Setup-0.1.1.exe
+sha512: oNuyuroAJ++YAyD6LS0iE0lENC30sOFnzTGNGjX0LsIg/Pz9K9b0MojhHLNwueoVXVTLSMdws1z17OgbMOrtDw==
+releaseDate: '2026-11-28T16:37:26.397Z'

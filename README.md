@@ -4,7 +4,7 @@
 
 [![Latest Horizon](https://img.shields.io/badge/HORIZON-v0.3.62-10b981?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/latest)
 [![Latest Pulsar](https://img.shields.io/badge/PULSAR-v0.1.3-38bdf8?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/tag/pulsar-v0.1.3)
-[![Latest BlackEye](https://img.shields.io/badge/BLACKEYE-v0.1.0-ef4444?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/tag/blackeye-v0.1.0)
+[![Latest BlackEye](https://img.shields.io/badge/BLACKEYE-v0.1.1-ef4444?style=for-the-badge&labelColor=050608)](https://github.com/novaozone187/novium-releases/releases/tag/blackeye-v0.1.1)
 [![Downloads Page](https://img.shields.io/badge/WEBSITE-DOWNLOADS-f4f4f5?style=for-the-badge&labelColor=050608)](https://noviumecosystem.vercel.app/download)
 
 Unified binary distribution, auto-updater feeds (`feeds/`), and daemon bundles for **Novium Horizon**, **Novium Pulsar**, **Novium BlackEye**, **pulsar-daemon**, and **blackeye-daemon**.
@@ -21,7 +21,7 @@ Unified binary distribution, auto-updater feeds (`feeds/`), and daemon bundles f
 |---|---|---|---|
 | **Novium Horizon** | `v0.3.62` | Windows x64 | [`feeds/horizon/latest.yml`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/horizon/latest.yml) |
 | **Novium Pulsar** | `pulsar-v0.1.3` | Windows x64 | [`feeds/pulsar/latest.yml`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/pulsar/latest.yml) |
-| **Novium BlackEye** | `blackeye-v0.1.0` | Windows x64 | [`feeds/blackeye/latest.yml`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/blackeye/latest.yml) |
+| **Novium BlackEye** | `blackeye-v0.1.1` | Windows x64 | [`feeds/blackeye/latest.yml`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/blackeye/latest.yml) |
 | **Pulsar Daemon** | `pulsar-daemon-v0.1.1` | Win x64 / Linux x64 | [`feeds/daemons/pulsar-daemon.json`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/daemons/pulsar-daemon.json) |
 | **BlackEye Daemon** | `blackeye-daemon-v0.1.1` | Win x64 / Linux x64 | [`feeds/daemons/blackeye-daemon.json`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/daemons/blackeye-daemon.json) |
 
@@ -68,18 +68,18 @@ Unified binary distribution, auto-updater feeds (`feeds/`), and daemon bundles f
 
 ---
 
-## Latest Release: Novium BlackEye (`blackeye-v0.1.0`)
+## Latest Release: Novium BlackEye (`blackeye-v0.1.1`)
 
-- **Release Page:** [Novium BlackEye v0.1.0](https://github.com/novaozone187/novium-releases/releases/tag/blackeye-v0.1.0)
+- **Release Page:** [Novium BlackEye v0.1.1](https://github.com/novaozone187/novium-releases/releases/tag/blackeye-v0.1.1)
 - **Published:** `2026-11-28`
 - **Updater Feed:** [`feeds/blackeye/latest.yml`](https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/blackeye/latest.yml)
 
 | Target | Package | File | Size | SHA-256 |
 |---|---|---|---|---|
-| Windows 10/11 x64 | One-Click NSIS Installer (.exe) | [Novium-BlackEye-Setup-0.1.0.exe](https://github.com/novaozone187/novium-releases/releases/download/blackeye-v0.1.0/Novium-BlackEye-Setup-0.1.0.exe) | 80.7 MB | `4c3384635d575f7ab40e35e428d895cb600b9ad329515515551160af50f48425` |
-| Windows 10/11 x64 | Compatibility Alias (.exe) | [Novium.BlackEye.Setup.0.1.0.exe](https://github.com/novaozone187/novium-releases/releases/download/blackeye-v0.1.0/Novium.BlackEye.Setup.0.1.0.exe) | 80.7 MB | `4c3384635d575f7ab40e35e428d895cb600b9ad329515515551160af50f48425` |
-| Windows 10/11 x64 | Differential Blockmap | [Novium-BlackEye-Setup-0.1.0.exe.blockmap](https://github.com/novaozone187/novium-releases/releases/download/blackeye-v0.1.0/Novium-BlackEye-Setup-0.1.0.exe.blockmap) | 86.1 KB | `69a8908982d20c722553a12a1996b45efa53d14b26bbeaf606616d22f45c74c1` |
-| Auto-Updater | Electron Updater Feed | [latest.yml](https://github.com/novaozone187/novium-releases/releases/download/blackeye-v0.1.0/latest.yml) | 358 B | `85c560a3071016f6e5b5fffc2e2d252f8574a6725009df468581db6a047fedd2` |
+| Windows 10/11 x64 | One-Click NSIS Installer (.exe) | [Novium-BlackEye-Setup-0.1.1.exe](https://github.com/novaozone187/novium-releases/releases/download/blackeye-v0.1.1/Novium-BlackEye-Setup-0.1.1.exe) | 80.7 MB | `4e21475b2f7f76471d1d61c56b5829a124b1d80372a9c1b2cc45ca8396a7f6f4` |
+| Windows 10/11 x64 | Compatibility Alias (.exe) | [Novium.BlackEye.Setup.0.1.1.exe](https://github.com/novaozone187/novium-releases/releases/download/blackeye-v0.1.1/Novium.BlackEye.Setup.0.1.1.exe) | 80.7 MB | `4e21475b2f7f76471d1d61c56b5829a124b1d80372a9c1b2cc45ca8396a7f6f4` |
+| Windows 10/11 x64 | Differential Blockmap | [Novium-BlackEye-Setup-0.1.1.exe.blockmap](https://github.com/novaozone187/novium-releases/releases/download/blackeye-v0.1.1/Novium-BlackEye-Setup-0.1.1.exe.blockmap) | 86.1 KB | `bf0b7ab7095487e7c18e764df9bee7c456897e827f5b87305ac5b2f4adcb462f` |
+| Auto-Updater | Electron Updater Feed | [latest.yml](https://github.com/novaozone187/novium-releases/releases/download/blackeye-v0.1.1/latest.yml) | 358 B | `cd610c071b8887b309a66675e58015a0d9110036fa9c18400b2fc778ae0b4cf6` |
 
 ---
 

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-28T16:39:37.354Z",
+  "generatedAt": "2026-11-28T16:40:15.458Z",
   "apps": {
     "horizon": {
       "version": "0.3.62",
@@ -31,16 +31,16 @@
       }
     },
     "blackeye": {
-      "version": "0.1.0",
-      "tag": "blackeye-v0.1.0",
-      "publishedAt": "2026-11-28T15:03:27Z",
+      "version": "0.1.1",
+      "tag": "blackeye-v0.1.1",
+      "publishedAt": "2026-11-28T16:40:00Z",
       "feedUrl": "https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/blackeye/latest.yml",
       "platforms": {
         "win32-x64": {
-          "url": "https://github.com/novaozone187/novium-releases/releases/download/blackeye-v0.1.0/Novium-BlackEye-Setup-0.1.0.exe",
-          "sha512": "6+hK4UhTGjvZBDZrB/tZhRLmPGX1sfJ4h8wvFaS5yrmU6OLBu02RI3zTqOgKhqJLCmaMXatvVm9egzd2/RL4uQ==",
-          "sha256": "4c3384635d575f7ab40e35e428d895cb600b9ad329515515551160af50f48425",
-          "size": 84657558
+          "url": "https://github.com/novaozone187/novium-releases/releases/download/blackeye-v0.1.1/Novium-BlackEye-Setup-0.1.1.exe",
+          "sha512": "oNuyuroAJ++YAyD6LS0iE0lENC30sOFnzTGNGjX0LsIg/Pz9K9b0MojhHLNwueoVXVTLSMdws1z17OgbMOrtDw==",
+          "sha256": "4e21475b2f7f76471d1d61c56b5829a124b1d80372a9c1b2cc45ca8396a7f6f4",
+          "size": 84669224
         }
       }
     }
