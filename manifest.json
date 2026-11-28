@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-28T16:40:53.295Z",
+  "generatedAt": "2026-11-28T16:41:23.230Z",
   "apps": {
     "horizon": {
-      "version": "0.3.62",
-      "tag": "v0.3.62",
-      "publishedAt": "2026-11-26T20:01:36Z",
+      "version": "0.3.63",
+      "tag": "v0.3.63",
+      "publishedAt": "2026-11-28T16:41:17Z",
       "feedUrl": "https://raw.githubusercontent.com/novaozone187/novium-releases/main/feeds/horizon/latest.yml",
       "platforms": {
         "win32-x64": {
-          "url": "https://github.com/novaozone187/novium-releases/releases/download/v0.3.62/Novium-Horizon-Setup-0.3.62.exe",
-          "sha512": "yPsALPqKO9qJcU6lDw4defRaTTDY4BPg0VoSs1YgjYQ6Q9dAtw4HjIPdZFcmmSzdV6jPqSnWIla5vSWMvgpVAQ==",
-          "sha256": "d9bc43c916ce8d6b1de29b2c8450a339ddfd50cf6358b7d5ba345534448cd051",
-          "size": 84905079
+          "url": "https://github.com/novaozone187/novium-releases/releases/download/v0.3.63/Novium-Horizon-Setup-0.3.63.exe",
+          "sha512": "yqCOdNXN3yP7mmHUWce/TuIy3+n+UHDQB1i1HBWANmulA73annLdXsIwNPVYqnsq2bDpencPk+FaVtEWqG10yw==",
+          "sha256": "e1df62168552bd23fd664dba2d02712a366d41b93ae8b55f1a868477dd28cd4f",
+          "size": 84915973
         }
       }
     },
