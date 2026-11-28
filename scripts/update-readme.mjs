@@ -11,6 +11,7 @@ const ALL_RELEASES_URL = `https://github.com/${REPO}/releases`;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const README_PATH = path.resolve(__dirname, '..', 'README.md');
 const PULSAR_FEED_PATH = path.resolve(__dirname, '..', 'feed', 'pulsar.yml');
+const BLACKEYE_FEED_PATH = path.resolve(__dirname, '..', 'feeds', 'blackeye', 'latest.yml');
 
 const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
 const waitForAssets = process.env.WAIT_FOR_ASSETS === '1';
@@ -92,8 +93,13 @@ async function getReleasesWithRetry() {
       `https://api.github.com/repos/${REPO}/releases?per_page=20`,
     );
     const published = releases.filter((r) => !r.draft && !r.prerelease);
-    const horizonReleases = published.filter((r) => !String(r.tag_name || '').startsWith('pulsar-'));
+    const horizonReleases = published.filter(
+      (r) =>
+        !String(r.tag_name || '').startsWith('pulsar-') &&
+        !String(r.tag_name || '').startsWith('blackeye-'),
+    );
     const pulsarReleases = published.filter((r) => String(r.tag_name || '').startsWith('pulsar-'));
+    const blackeyeReleases = published.filter((r) => String(r.tag_name || '').startsWith('blackeye-'));
     const latestHorizon = horizonReleases[0];
     if (!latestHorizon) {
       throw new Error('No published non-draft Horizon releases found.');
@@ -101,7 +107,7 @@ async function getReleasesWithRetry() {
 
     const { primary, latestYml } = selectInstallers(latestHorizon.assets);
     if ((primary && latestYml) || attempt === maxAttempts) {
-      return { horizonReleases, pulsarReleases };
+      return { horizonReleases, pulsarReleases, blackeyeReleases };
     }
 
     console.log(
@@ -109,7 +115,7 @@ async function getReleasesWithRetry() {
     );
     await new Promise((resolve) => setTimeout(resolve, 15000));
   }
-  return { horizonReleases: [], pulsarReleases: [] };
+  return { horizonReleases: [], pulsarReleases: [], blackeyeReleases: [] };
 }
 
 function selectPulsarAssets(assets) {
@@ -124,6 +130,18 @@ function selectPulsarAssets(assets) {
   return { primary, blockmap, pulsarYml };
 }
 
+function selectBlackEyeAssets(assets) {
+  const list = Array.isArray(assets) ? assets : [];
+  const primary =
+    list.find((a) => /^Novium-BlackEye-Setup-.+\.exe$/i.test(a.name ?? '')) ??
+    list.find((a) => /\.exe$/i.test(a.name ?? ''));
+  const blockmap = list.find(
+    (a) => primary && a.name === `${primary.name}.blockmap`,
+  );
+  const feedYml = list.find((a) => a.name === 'latest.yml' || a.name === 'blackeye.yml');
+  return { primary, blockmap, feedYml };
+}
+
 function rewritePulsarFeedYaml(yamlText, downloadUrl) {
   if (!yamlText || !downloadUrl) return '';
   let out = yamlText.replace(/^(\s*-\s*url:\s*)([^\r\n]+)/m, `$1${downloadUrl}`);
@@ -132,9 +150,10 @@ function rewritePulsarFeedYaml(yamlText, downloadUrl) {
 }
 
 async function main() {
-  const { horizonReleases: releases, pulsarReleases } = await getReleasesWithRetry();
+  const { horizonReleases: releases, pulsarReleases, blackeyeReleases } = await getReleasesWithRetry();
   const latest = releases[0];
   const latestPulsar = pulsarReleases[0] || null;
+  const latestBlackEye = blackeyeReleases[0] || null;
 
   if (latestPulsar) {
     const { primary: pExe, pulsarYml } = selectPulsarAssets(latestPulsar.assets);
@@ -145,6 +164,19 @@ async function main() {
         await fs.mkdir(path.dirname(PULSAR_FEED_PATH), { recursive: true });
         await fs.writeFile(PULSAR_FEED_PATH, rewritten, 'utf8');
         console.log(`Updated ${PULSAR_FEED_PATH} for ${latestPulsar.tag_name}.`);
+      }
+    }
+  }
+
+  if (latestBlackEye) {
+    const { primary: bExe, feedYml } = selectBlackEyeAssets(latestBlackEye.assets);
+    if (bExe?.browser_download_url && feedYml?.browser_download_url) {
+      const bYamlText = await fetchText(feedYml.browser_download_url);
+      const rewritten = rewritePulsarFeedYaml(bYamlText, bExe.browser_download_url);
+      if (rewritten) {
+        await fs.mkdir(path.dirname(BLACKEYE_FEED_PATH), { recursive: true });
+        await fs.writeFile(BLACKEYE_FEED_PATH, rewritten, 'utf8');
+        console.log(`Updated ${BLACKEYE_FEED_PATH} for ${latestBlackEye.tag_name}.`);
       }
     }
   }
@@ -227,7 +259,7 @@ async function main() {
     `3. **Download the installer:** Scroll to the **Assets** section at the bottom of the release notes and download \`${primaryFileName}\`.`,
     `4. **Automatic updates:** Once installed, Horizon checks this repository automatically via \`electron-updater\` (\`latest.yml\` + \`.blockmap\`).`,
     ``,
-    `> **Availability:** **Novium Horizon** and **Novium Pulsar** for Windows (x64) are published here. macOS, Linux, and Novium BlackEye are currently unavailable.`,
+    `> **Availability:** **Novium Horizon**, **Novium Pulsar**, and **Novium BlackEye** for Windows (x64) are published here. macOS and Linux builds are currently unavailable.`,
     ``,
     `> [!IMPORTANT]`,
     `> **Early Development Status:** Novium Horizon is in active early development and is not 100% stable. Hardware hooks, system APIs, and desktop overlays are subject to rapid iteration.`,
@@ -293,6 +325,45 @@ async function main() {
             `| Target | Package | File | Size | SHA-256 |`,
             `|---|---|---|---|---|`,
             ...pRows,
+            ``,
+          ];
+        })()
+      : []),
+    ...(latestBlackEye
+      ? (() => {
+          const bTag = latestBlackEye.tag_name;
+          const bVer = bTag.replace(/^blackeye-v/, '');
+          const bDate = (latestBlackEye.published_at || latestBlackEye.created_at || '').slice(0, 10);
+          const { primary: bExe, blockmap: bBlockmap, feedYml } = selectBlackEyeAssets(latestBlackEye.assets);
+          const bRows = [];
+          if (bExe) {
+            bRows.push(
+              `| Windows 10/11 x64 | One-Click NSIS Installer (.exe) | [${bExe.name}](${bExe.browser_download_url}) | ${formatBytes(bExe.size)} | \`${bExe.digest?.replace(/^sha256:/, '') || 'See GitHub release'}\` |`,
+            );
+          }
+          if (bBlockmap) {
+            bRows.push(
+              `| Windows 10/11 x64 | Differential Blockmap | [${bBlockmap.name}](${bBlockmap.browser_download_url}) | ${formatBytes(bBlockmap.size)} | \`${bBlockmap.digest?.replace(/^sha256:/, '') || '—'}\` |`,
+            );
+          }
+          if (feedYml) {
+            bRows.push(
+              `| Auto-Updater | Electron Updater Feed | [${feedYml.name}](${feedYml.browser_download_url}) | ${formatBytes(feedYml.size)} | \`${feedYml.digest?.replace(/^sha256:/, '') || '—'}\` |`,
+            );
+          }
+          return [
+            `---`,
+            ``,
+            `## Latest Release: Novium BlackEye v${bVer} (\`${bTag}\`)`,
+            ``,
+            `- **Release Page:** [${latestBlackEye.name || `Novium BlackEye v${bVer}`}](${latestBlackEye.html_url})`,
+            `- **Published:** \`${bDate}\``,
+            `- **Target:** Windows 10 / 11 (x64)`,
+            `- **Updater Feed:** [\`feeds/blackeye/latest.yml\`](https://raw.githubusercontent.com/${REPO}/main/feeds/blackeye/latest.yml)`,
+            ``,
+            `| Target | Package | File | Size | SHA-256 |`,
+            `|---|---|---|---|---|`,
+            ...bRows,
             ``,
           ];
         })()
